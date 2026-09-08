@@ -32,7 +32,7 @@ export const metadata = {
   ],
   authors: [{ name: "Dr. Ashaben Patel Government Science College Administration" }],
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#1b3557",
+  themeColor: "#0284c7",
 };
 
 export default function RootLayout({ children }) {
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 selection:bg-amber-500 selection:text-white">
+      <body className="min-h-full flex flex-col bg-[#f8fbff] text-slate-900 selection:bg-sky-500 selection:text-white">
         {children}
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import UrbanHeader from "@/components/UrbanHeader";
 import UrbanHeroSlider from "@/components/UrbanHeroSlider";
 import UrbanHomeGrid from "@/components/UrbanHomeGrid";
@@ -12,8 +12,6 @@ import FAQSection from "@/components/FAQSection";
 import UrbanFooter from "@/components/UrbanFooter";
 
 export default function Home() {
-  const [lang, setLang] = useState("en"); // 'en' | 'gu'
-
   const handleNavigateSection = (sectionId) => {
     const el = document.getElementById(sectionId);
     if (el) {
@@ -22,11 +20,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fafc] font-sans selection:bg-[#800000] selection:text-white">
-      {/* 1. MEHSANA URBAN STYLE HEADER WITH STATUTORY BAR & BURGUNDY NAVBAR */}
+    <div className="min-h-screen flex flex-col bg-[#f8fbff] font-sans selection:bg-sky-500 selection:text-white">
+      {/* 1. MEHSANA URBAN STYLE HEADER WITH STATUTORY BAR & LIGHT BLUE NAVBAR */}
       <UrbanHeader
-        lang={lang}
-        setLang={setLang}
         onNavigateSection={handleNavigateSection}
       />
 
@@ -34,37 +30,32 @@ export default function Home() {
       <main className="flex-1 w-full">
         {/* 2. CLEAN COLLEGE CAMPUS HERO BANNER */}
         <UrbanHeroSlider
-          lang={lang}
           onNavigateSection={handleNavigateSection}
         />
 
         {/* 3. 2-COLUMN HOMEPAGE GRID (About The College | Circulars & Notices) */}
         <UrbanHomeGrid
-          lang={lang}
           onNavigateSection={handleNavigateSection}
         />
 
         {/* 4. ACADEMIC DEPARTMENTS & NEP 2020 COURSES */}
-        <UrbanDepartments
-          lang={lang}
-        />
+        <UrbanDepartments />
 
         {/* 5. PRESIDENT & PRINCIPAL'S DESK + IQAC NAAC SECTION */}
-        <UrbanPrincipalDesk lang={lang} />
+        <UrbanPrincipalDesk />
 
         {/* 6. CAMPUS FACILITIES & RESOURCES */}
-        <UrbanStatsAndFacilities lang={lang} />
+        <UrbanStatsAndFacilities />
 
         {/* 7. PHOTO & EVENT GALLERY */}
-        <UrbanGallery lang={lang} />
+        <UrbanGallery />
 
-        {/* 9. STUDENT & PARENT FAQ */}
-        <FAQSection lang={lang} />
+        {/* 8. STUDENT & PARENT FAQ */}
+        <FAQSection />
       </main>
 
-      {/* 11. 4-COLUMN INSTITUTIONAL FOOTER */}
+      {/* 9. 3-COLUMN INSTITUTIONAL FOOTER */}
       <UrbanFooter
-        lang={lang}
         onNavigateSection={handleNavigateSection}
       />
     </div>

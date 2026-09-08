@@ -91,7 +91,7 @@ export default function UrbanHeroSlider() {
               onClick={() => setCurrentSlide(idx)}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 idx === currentSlide
-                  ? "w-8 bg-amber-400 shadow-md"
+                  ? "w-8 bg-sky-400"
                   : "w-2.5 bg-white/60 hover:bg-white"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
