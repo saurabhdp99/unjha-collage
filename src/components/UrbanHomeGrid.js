@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Icon } from "./Icons";
-import { notices, collegeInfo, administration } from "@/data/collegeData";
+import { notices, collegeInfo } from "@/data/collegeData";
 
 export default function UrbanHomeGrid({
   lang,
@@ -22,61 +22,14 @@ export default function UrbanHomeGrid({
     return n.category === activeNoticeTab;
   });
 
-  const quickLinks = [
-    {
-      title: lang === "gu" ? "શૈક્ષણિક અભ્યાસક્રમો (NEP)" : "Academic Programs (NEP)",
-      icon: "BookOpen",
-      color: "bg-[#800000] text-white",
-      action: () => onNavigateSection("departments"),
-      badge: "NEP 2020",
-    },
-    {
-      title: lang === "gu" ? "પ્રવેશ માર્ગદર્શન & હેલ્પડેસ્ક" : "Admission Inquiry & Helpdesk",
-      icon: "Phone",
-      color: "bg-[#1b3557] text-white",
-      action: () => onNavigateSection("contact-section"),
-      badge: "Campus",
-    },
-    {
-      title: lang === "gu" ? "કેમ્પસ સુવિધાઓ & લાઇબ્રેરી" : "Campus Facilities & Library",
-      icon: "LandPlot",
-      color: "bg-[#d97706] text-white",
-      action: () => onNavigateSection("facilities-section"),
-    },
-    {
-      title: lang === "gu" ? "MYSY & ડિજિટલ ગુજરાત સ્કોલરશિપ" : "MYSY / Govt Scholarships",
-      icon: "Award",
-      color: "bg-[#0f3b2e] text-white",
-      action: () => onNavigateSection("scholarship-section"),
-    },
-    {
-      title: lang === "gu" ? "NEP ૨૦૨૦ અભ્યાસક્રમ (Syllabus)" : "NEP 2020 Syllabus",
-      icon: "BookOpen",
-      color: "bg-slate-800 text-white",
-      action: () => onNavigateSection("departments"),
-    },
-    {
-      title: lang === "gu" ? "રેગિંગ વિરોધી & ફરિયાદ નિવારણ" : "Anti-Ragging & Grievance",
-      icon: "ShieldCheck",
-      color: "bg-red-800 text-white",
-      action: () => onNavigateSection("committees-section"),
-    },
-    {
-      title: lang === "gu" ? "BAOU મુક્ત શિક્ષણ કેન્દ્ર (1502)" : "BAOU Study Centre",
-      icon: "GraduationCap",
-      color: "bg-indigo-900 text-white",
-      action: () => onNavigateSection("departments"),
-    },
-  ];
-
   return (
     <section className="py-10 bg-[#f8fafc] border-b border-slate-200 font-sans">
       <div className="max-w-7xl mx-auto px-4">
-        {/* 3-COLUMN MEHSANA URBAN COLLEGE HOMEPAGE GRID */}
+        {/* 2-COLUMN HOMEPAGE GRID (About & Notices) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           
-          {/* ================= COLUMN 1: ABOUT & COLLEGE PROFILE (~4 Cols) ================= */}
-          <div className="lg:col-span-4 bg-white rounded-xl border border-slate-200 shadow-sm p-5 sm:p-6">
+          {/* ================= COLUMN 1: ABOUT & COLLEGE PROFILE (5 Cols) ================= */}
+          <div className="lg:col-span-5 bg-white rounded-xl border border-slate-200 shadow-sm p-5 sm:p-6">
             {/* Header */}
             <div className="border-b-2 border-[#800000] pb-2.5 mb-4 flex items-center justify-between">
               <h3 className="text-base sm:text-lg font-black text-[#1b3557] uppercase tracking-wide flex items-center gap-2">
@@ -142,8 +95,8 @@ export default function UrbanHomeGrid({
             </button>
           </div>
 
-          {/* ================= COLUMN 2: LATEST NOTICES & CIRCULARS (~5 Cols) ================= */}
-          <div id="notice-section" className="lg:col-span-5 bg-white rounded-xl border border-slate-200 shadow-sm p-5 sm:p-6">
+          {/* ================= COLUMN 2: LATEST NOTICES & CIRCULARS (7 Cols) ================= */}
+          <div id="notice-section" className="lg:col-span-7 bg-white rounded-xl border border-slate-200 shadow-sm p-5 sm:p-6">
             {/* Header */}
             <div className="border-b-2 border-[#800000] pb-2.5 mb-3 flex items-center justify-between">
               <h3 className="text-base sm:text-lg font-black text-[#1b3557] uppercase tracking-wide flex items-center gap-2">
@@ -227,57 +180,6 @@ export default function UrbanHomeGrid({
               >
                 {lang === "gu" ? "તમામ પરિપત્રો આર્કાઇવ જુઓ →" : "View All Circulars Archive →"}
               </button>
-            </div>
-          </div>
-
-          {/* ================= COLUMN 3: QUICK LINKS & STUDENT PORTAL (~3 Cols) ================= */}
-          <div className="lg:col-span-3 bg-white rounded-xl border border-slate-200 shadow-sm p-5">
-            {/* Header */}
-            <div className="border-b-2 border-[#800000] pb-2.5 mb-4 flex items-center justify-between">
-              <h3 className="text-base font-black text-[#1b3557] uppercase tracking-wide flex items-center gap-2">
-                <Icon name="Users" className="w-5 h-5 text-[#800000]" />
-                <span>{lang === "gu" ? "ઉપયોગી લિંક્સ" : "Quick Links"}</span>
-              </h3>
-              <span className="text-xs font-bold text-amber-600">Services</span>
-            </div>
-
-            {/* Quick Links List */}
-            <div className="space-y-2">
-              {quickLinks.map((link, idx) => (
-                <button
-                  key={idx}
-                  onClick={link.action}
-                  className="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:border-[#1b3557] bg-[#f8fafc] hover:bg-slate-100 transition-all flex items-center justify-between group"
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <div className={`p-1.5 rounded-md ${link.color} shrink-0`}>
-                      <Icon name={link.icon} className="w-4 h-4" />
-                    </div>
-                    <span className="text-xs font-bold text-slate-800 group-hover:text-[#1b3557] truncate">
-                      {link.title}
-                    </span>
-                  </div>
-
-                  {link.badge ? (
-                    <span className="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-amber-500 text-slate-950 uppercase shrink-0">
-                      {link.badge}
-                    </span>
-                  ) : (
-                    <Icon name="ChevronRight" className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 transition-transform shrink-0" />
-                  )}
-                </button>
-              ))}
-            </div>
-
-            {/* Helpline Callout Box */}
-            <div className="mt-4 p-3 rounded-lg bg-gradient-to-br from-[#1b3557] to-[#0f233a] text-white text-xs text-center">
-              <div className="font-bold text-amber-300 text-[11px] uppercase">
-                {lang === "gu" ? "વિદ્યાર્થી સહાય ડેસ્ક" : "Admissions & Results Help"}
-              </div>
-              <div className="text-sm font-black font-mono mt-0.5 text-white">
-                {collegeInfo.helpline}
-              </div>
-              <div className="text-[10px] text-slate-300 mt-0.5">Mon - Sat: 8:00 AM - 4:30 PM</div>
             </div>
           </div>
 

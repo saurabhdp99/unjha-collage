@@ -9,7 +9,6 @@ import UrbanPrincipalDesk from "@/components/UrbanPrincipalDesk";
 import UrbanStatsAndFacilities from "@/components/UrbanStatsAndFacilities";
 import ScholarshipSection from "@/components/ScholarshipSection";
 import UrbanGallery from "@/components/UrbanGallery";
-import AlumniAndRecruiters from "@/components/AlumniAndRecruiters";
 import FAQSection from "@/components/FAQSection";
 import UrbanFooter from "@/components/UrbanFooter";
 
@@ -40,7 +39,7 @@ export default function Home() {
           onNavigateSection={handleNavigateSection}
         />
 
-        {/* 3. SIGNATURE 3-COLUMN MEHSANA URBAN HOMEPAGE GRID (About | Notices | Quick Links) */}
+        {/* 3. 2-COLUMN HOMEPAGE GRID (About The College | Circulars & Notices) */}
         <UrbanHomeGrid
           lang={lang}
           onNavigateSection={handleNavigateSection}
@@ -54,7 +53,7 @@ export default function Home() {
         {/* 5. PRESIDENT & PRINCIPAL'S DESK + IQAC NAAC SECTION */}
         <UrbanPrincipalDesk lang={lang} />
 
-        {/* 6. INSTITUTIONAL STATS & 6-CARD CAMPUS FACILITIES */}
+        {/* 6. CAMPUS FACILITIES & RESOURCES */}
         <UrbanStatsAndFacilities lang={lang} />
 
         {/* 7. GUJARAT GOVT SCHOLARSHIPS (MYSY & DIGITAL GUJARAT) */}
@@ -63,10 +62,7 @@ export default function Home() {
         {/* 8. PHOTO & EVENT GALLERY */}
         <UrbanGallery lang={lang} />
 
-        {/* 9. RECRUITERS & ALUMNI SPOTLIGHT */}
-        <AlumniAndRecruiters lang={lang} />
-
-        {/* 10. STUDENT & PARENT FAQ */}
+        {/* 9. STUDENT & PARENT FAQ */}
         <FAQSection lang={lang} />
       </main>
 

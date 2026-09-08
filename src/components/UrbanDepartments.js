@@ -173,7 +173,7 @@ export default function UrbanDepartments({ lang }) {
               <div className="p-3.5 bg-amber-50 rounded-lg border border-amber-200 mb-4 text-xs text-amber-950">
                 <div className="font-bold text-amber-900 mb-1 flex items-center gap-1">
                   <Icon name="Award" className="w-4 h-4 text-amber-700" />
-                  <span>Program Highlights & Placements:</span>
+                  <span>Program Highlights:</span>
                 </div>
                 <ul className="space-y-1">
                   {selectedCourseForModal.highlights.map((hl, hIdx) => (

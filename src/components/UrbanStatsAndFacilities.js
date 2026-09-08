@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Icon } from "./Icons";
-import { collegeInfo, facilities } from "@/data/collegeData";
+import { facilities } from "@/data/collegeData";
 
 export default function UrbanStatsAndFacilities({ lang }) {
   const facilityImages = {
@@ -17,21 +17,6 @@ export default function UrbanStatsAndFacilities({ lang }) {
   return (
     <section id="facilities-section" className="py-14 bg-white border-b border-slate-200 font-sans">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Statistics Bar (Mehsana Urban College Numbers Bar) */}
-        <div className="bg-gradient-to-r from-[#1b3557] via-[#112233] to-[#800000] rounded-2xl p-6 sm:p-8 text-white shadow-lg mb-14">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
-            {collegeInfo.stats.map((stat, idx) => (
-              <div key={idx} className="border-r border-white/10 last:border-0">
-                <div className="text-2xl sm:text-3xl font-black text-amber-300 tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-xs text-slate-200 font-medium mt-1">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 border-b-2 border-slate-200 pb-4">
