@@ -97,7 +97,7 @@ export default function ScholarshipSection({ lang }) {
                   </a>
                 ) : (
                   <button
-                    onClick={() => alert(lang === "gu" ? "ઊંઝા કેળવણી મંડળ સ્કોલરશિપ માટે કોલેજ ઓફિસનો સંપર્ક કરવો." : "Please visit college administration counter for Trust Scholarship form.")}
+                    onClick={() => alert(lang === "gu" ? "સરકારી વિજ્ઞાન કોલેજ સહાય માટે કોલેજ ઓફિસનો સંપર્ક કરવો." : "Please visit college administration counter for Institutional Aid & Scholarship form.")}
                     className="px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-colors"
                   >
                     {lang === "gu" ? "કોલેજ કાઉન્ટર ફોર્મ" : "College Office Form"}

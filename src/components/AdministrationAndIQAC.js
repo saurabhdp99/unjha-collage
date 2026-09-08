@@ -81,7 +81,7 @@ export default function AdministrationAndIQAC({ lang }) {
                   {administration.principalDesignation}
                 </p>
                 <div className="mt-3 inline-block px-3 py-1 bg-blue-50 text-blue-900 text-[11px] font-bold rounded-full border border-blue-100">
-                  {lang === "gu" ? "શ્રી બી. પી. બ્રહ્મભટ્ટ કોલેજ, ઊંઝા" : "Shri B. P. Brahmbhatt College, Unjha"}
+                  {lang === "gu" ? collegeInfo.gujaratiName : collegeInfo.name}
                 </div>
               </div>
 
@@ -197,7 +197,7 @@ export default function AdministrationAndIQAC({ lang }) {
                   Fair and prompt redressal of academic and administrative student grievances.
                 </p>
                 <div className="text-xs font-semibold text-blue-900">
-                  Email: grievance@accunjha.org
+                  Email: {collegeInfo.email}
                 </div>
               </div>
 

@@ -54,7 +54,7 @@ export default function UrbanStudentLoginModal({ lang, isOpen, onClose }) {
                 {lang === "gu" ? "વિદ્યાર્થી પોર્ટલ લોગીન" : "Student Portal Login"}
               </h3>
               <p className="text-[11px] text-slate-500 font-medium">
-                Unjha College / HNGU Student Access
+                Dr. Ashaben Patel Govt. Science College / HNGU Access
               </p>
             </div>
           </div>

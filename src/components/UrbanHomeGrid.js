@@ -6,7 +6,6 @@ import { notices, collegeInfo, administration } from "@/data/collegeData";
 
 export default function UrbanHomeGrid({
   lang,
-  onOpenApplyModal,
   onNavigateSection,
 }) {
   const [activeNoticeTab, setActiveNoticeTab] = useState("All");
@@ -32,11 +31,11 @@ export default function UrbanHomeGrid({
       badge: "NEP 2020",
     },
     {
-      title: lang === "gu" ? "ઓનલાઇન પ્રવેશ ૨૦૨૫-૨૬" : "Online Admission Form",
-      icon: "Sparkles",
+      title: lang === "gu" ? "પ્રવેશ માર્ગદર્શન & હેલ્પડેસ્ક" : "Admission Inquiry & Helpdesk",
+      icon: "Phone",
       color: "bg-[#1b3557] text-white",
-      action: onOpenApplyModal,
-      badge: "Open",
+      action: () => onNavigateSection("contact-section"),
+      badge: "Campus",
     },
     {
       title: lang === "gu" ? "કેમ્પસ સુવિધાઓ & લાઇબ્રેરી" : "Campus Facilities & Library",
@@ -84,19 +83,19 @@ export default function UrbanHomeGrid({
                 <Icon name="Building" className="w-5 h-5 text-[#800000]" />
                 <span>{lang === "gu" ? "કોલેજ પરિચય" : "About The College"}</span>
               </h3>
-              <span className="text-[11px] font-bold text-slate-400 font-mono">ESTD. 1965</span>
+              <span className="text-[11px] font-bold text-slate-400 font-mono">ESTD. 2020</span>
             </div>
 
             {/* Campus Image Preview */}
             <div className="rounded-lg overflow-hidden border border-slate-200 mb-3.5 shadow-sm relative h-36">
               <img
                 src="/images/campus_front.jpg"
-                alt="Unjha College Main Campus"
+                alt="Dr. Ashaben Patel Government Science College Campus"
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2 text-white text-[11px] font-semibold flex items-center justify-between">
-                <span>Shri Unjha College Main Building</span>
-                <span className="text-amber-300 font-mono">Code: 021</span>
+                <span>MRS Highschool Campus, Unjha</span>
+                <span className="text-amber-300 font-mono">Code: {collegeInfo.hnguCode}</span>
               </div>
             </div>
 
@@ -105,11 +104,11 @@ export default function UrbanHomeGrid({
               {lang === "gu" ? (
                 <>
                   <strong className="text-[#1b3557]">{collegeInfo.gujaratiName}</strong>{" "}
-                  હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન ઉત્તર ગુજરાતનું અગ્રણી શૈક્ષણિક સંસ્થાન છે. ૧૯૬૫ માં સ્થપાયેલ આ કોલેજ આર્ટ્સ, કોમર્સ, મેનેજમેન્ટ અને લો ક્ષેત્રે ઉત્કૃષ્ટ શિક્ષણ પ્રદાન કરે છે.
+                  હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન ઉત્તર ગુજરાતનું અગ્રણી સરકારી વિજ્ઞાન મહાવિદ્યાલય છે. એમ. આર. એસ. હાઇસ્કૂલ કેમ્પસ, ઊંઝા (જી. મહેસાણા) ખાતે સ્થિત આ સંસ્થા અદ્યતન લેબોરેટરીઝ અને વિજ્ઞાન શાખામાં ઉચ્ચ શિક્ષણ પ્રદાન કરે છે.
                 </>
               ) : (
                 <>
-                  <strong className="text-[#1b3557]">{collegeInfo.name}</strong>, established in 1965 under the aegis of Shri Unjha Kelavani Mandal, is one of the premier institutions of higher learning affiliated to Hemchandracharya North Gujarat University (HNGU), Patan.
+                  <strong className="text-[#1b3557]">{collegeInfo.name}</strong>, located at MRS Highschool Campus, Unjha (Dist. Mehsana), is a premier government science institution affiliated to Hemchandracharya North Gujarat University (HNGU), Patan, dedicated to excellence in pure and applied sciences.
                 </>
               )}
             </p>
@@ -117,16 +116,16 @@ export default function UrbanHomeGrid({
             {/* Key Quality Accreditations Box */}
             <div className="space-y-2 text-xs bg-[#f1f5f9] p-3.5 rounded-lg border border-slate-200 mb-4">
               <div className="flex items-center justify-between">
-                <span className="font-semibold text-slate-600">NAAC Accreditation:</span>
-                <span className="font-bold text-[#800000]">Grade 'B' (CGPA 2.75)</span>
+                <span className="font-semibold text-slate-600">Institution Type:</span>
+                <span className="font-bold text-[#800000]">Government Science College</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="font-semibold text-slate-600">UGC Recognition:</span>
-                <span className="font-bold text-emerald-700">2(f) & 12(B) Permanent</span>
+                <span className="font-semibold text-slate-600">Governance:</span>
+                <span className="font-bold text-emerald-700">Higher Education Dept, Gujarat</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-slate-600">HNGU College Code:</span>
-                <span className="font-bold text-[#1b3557] font-mono">021 (Patan Univ)</span>
+                <span className="font-bold text-[#1b3557] font-mono">{collegeInfo.hnguCode} (Patan Univ)</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-slate-600">AISHE Code:</span>

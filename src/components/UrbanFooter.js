@@ -4,7 +4,7 @@ import React from "react";
 import { Icon } from "./Icons";
 import { collegeInfo } from "@/data/collegeData";
 
-export default function UrbanFooter({ lang, onNavigateSection, onOpenApplyModal }) {
+export default function UrbanFooter({ lang, onNavigateSection }) {
   return (
     <footer id="contact-section" className="bg-[#112233] text-slate-300 pt-12 pb-8 border-t-4 border-[#800000] font-sans">
       <div className="max-w-7xl mx-auto px-4">
@@ -21,29 +21,29 @@ export default function UrbanFooter({ lang, onNavigateSection, onOpenApplyModal 
                   {lang === "gu" ? collegeInfo.gujaratiName : collegeInfo.name}
                 </h4>
                 <div className="text-[11px] text-amber-400 font-semibold mt-0.5">
-                  Est. 1965 • {collegeInfo.trustName}
+                  Govt. of Gujarat • {collegeInfo.campus}
                 </div>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed mb-4 text-justify">
               {lang === "gu"
-                ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન ઉત્તર ગુજરાતનું અગ્રણી ઉચ્ચ શિક્ષણ સંસ્થાન."
-                : "A premier institution of higher learning in North Gujarat affiliated to Hemchandracharya North Gujarat University (HNGU), Patan."}
+                ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન ઉત્તર ગુજરાતનું અગ્રણી સરકારી વિજ્ઞાન મહાવિદ્યાલય."
+                : "A premier Government Science College in North Gujarat affiliated to Hemchandracharya North Gujarat University (HNGU), Patan."}
             </p>
 
             <div className="space-y-1.5 text-xs text-slate-400">
               <div className="flex items-center gap-2">
-                <span className="text-amber-400 font-bold">NAAC:</span>
-                <span>Accredited 'B' Grade (CGPA 2.75)</span>
+                <span className="text-amber-400 font-bold">Category:</span>
+                <span>Government Science College</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-emerald-400 font-bold">UGC:</span>
-                <span>Recognized 2(f) & 12(B) Permanent</span>
+                <span className="text-emerald-400 font-bold">Govt:</span>
+                <span>Education Department, Gujarat</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-blue-300 font-bold">Codes:</span>
-                <span>HNGU: 021 | AISHE: {collegeInfo.aisheCode}</span>
+                <span>HNGU: {collegeInfo.hnguCode} | AISHE: {collegeInfo.aisheCode}</span>
               </div>
             </div>
           </div>
@@ -64,13 +64,13 @@ export default function UrbanFooter({ lang, onNavigateSection, onOpenApplyModal 
               <li>
                 <button onClick={() => onNavigateSection("departments")} className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
                   <Icon name="ChevronRight" className="w-3 h-3 text-slate-500" />
-                  <span>Academic Departments & NEP</span>
+                  <span>B.Sc. Science Departments</span>
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigateSection("facilities-section")} className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-300 font-bold">
                   <Icon name="ChevronRight" className="w-3 h-3 text-amber-400" />
-                  <span>Campus & Infrastructure</span>
+                  <span>Laboratories & Campus</span>
                 </button>
               </li>
               <li>
@@ -88,7 +88,7 @@ export default function UrbanFooter({ lang, onNavigateSection, onOpenApplyModal 
               <li>
                 <button onClick={() => onNavigateSection("iqac-section")} className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-emerald-400 font-bold">
                   <Icon name="ChevronRight" className="w-3 h-3 text-emerald-400" />
-                  <span>IQAC & NAAC Reports</span>
+                  <span>IQAC & Academic Excellence</span>
                 </button>
               </li>
             </ul>
@@ -126,9 +126,9 @@ export default function UrbanFooter({ lang, onNavigateSection, onOpenApplyModal 
                 </a>
               </li>
               <li>
-                <a href="http://naac.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                <a href="https://che.gujarat.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
                   <Icon name="ExternalLink" className="w-3 h-3 text-slate-500" />
-                  <span>NAAC Quality Portal</span>
+                  <span>Commissioner of Higher Education</span>
                 </a>
               </li>
             </ul>
@@ -144,17 +144,28 @@ export default function UrbanFooter({ lang, onNavigateSection, onOpenApplyModal 
             <div className="space-y-2.5 text-xs">
               <div className="flex items-start gap-2">
                 <Icon name="MapPin" className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>{collegeInfo.address}</span>
+                <div className="space-y-0.5">
+                  <span className="font-bold text-white block">{collegeInfo.campus}</span>
+                  <span className="text-slate-300 block">{collegeInfo.address}</span>
+                  <span className="text-amber-300 text-[11px] font-semibold block">
+                    City: {collegeInfo.city} • Dist: {collegeInfo.district} (PIN: {collegeInfo.pincode})
+                  </span>
+                </div>
               </div>
 
               <div className="flex items-center gap-2">
                 <Icon name="Phone" className="w-4 h-4 text-amber-400 shrink-0" />
-                <span className="font-mono">{collegeInfo.phone}</span>
+                <span>Phone: <span className="font-mono text-white">{collegeInfo.phone}</span></span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Icon name="Printer" className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>College Fax: <span className="font-mono text-white">{collegeInfo.fax}</span></span>
               </div>
 
               <div className="flex items-center gap-2">
                 <Icon name="Mail" className="w-4 h-4 text-amber-400 shrink-0" />
-                <a href={`mailto:${collegeInfo.email}`} className="hover:text-amber-400">
+                <a href={`mailto:${collegeInfo.email}`} className="hover:text-amber-400 text-white">
                   {collegeInfo.email}
                 </a>
               </div>
@@ -167,7 +178,7 @@ export default function UrbanFooter({ lang, onNavigateSection, onOpenApplyModal 
 
             {/* Helpline Box */}
             <div className="mt-4 p-2.5 rounded-lg bg-[#1b3557] border border-slate-700 text-center">
-              <div className="text-[10px] text-slate-300 font-bold uppercase">Emergency Helpline</div>
+              <div className="text-[10px] text-slate-300 font-bold uppercase">College Helpdesk & Inquiry</div>
               <div className="text-sm font-black text-amber-400 font-mono">{collegeInfo.helpline}</div>
             </div>
           </div>

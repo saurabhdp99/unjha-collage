@@ -5,17 +5,14 @@ import { Icon } from "./Icons";
 import { academicPrograms } from "@/data/collegeData";
 import { translations } from "@/data/translations";
 
-export default function AcademicCourses({ lang, onOpenApplyModal }) {
+export default function AcademicCourses({ lang }) {
   const t = translations[lang];
   const [activeStream, setActiveStream] = useState("All");
   const [selectedCourseForModal, setSelectedCourseForModal] = useState(null);
 
   const streamFilters = [
     { id: "All", label: lang === "gu" ? "તમામ કોર્સ" : "All Programs" },
-    { id: "Commerce", label: lang === "gu" ? "કોમર્સ (B.Com / M.Com)" : "Commerce Stream" },
-    { id: "Arts", label: lang === "gu" ? "આર્ટ્સ (B.A. / M.A.)" : "Arts & Humanities" },
-    { id: "Management", label: lang === "gu" ? "મેનેજમેન્ટ (BBA)" : "Management (BBA)" },
-    { id: "Law", label: lang === "gu" ? "કાયદો (LL.B. Law)" : "Law College (LL.B.)" },
+    { id: "Science", label: lang === "gu" ? "વિજ્ઞાન શાખા (B.Sc.)" : "B.Sc. Science" },
     { id: "Open Learning", label: lang === "gu" ? "BAOU મુક્ત શિક્ષણ" : "BAOU Distance Learning" },
   ];
 
@@ -41,14 +38,6 @@ export default function AcademicCourses({ lang, onOpenApplyModal }) {
               {t.coursesSubtitle}
             </p>
           </div>
-
-          <button
-            onClick={onOpenApplyModal}
-            className="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2 self-start md:self-auto shrink-0"
-          >
-            <Icon name="Sparkles" className="w-4 h-4" />
-            <span>{lang === "gu" ? "ઓનલાઇન પ્રવેશ તપાસ" : "Admission Inquiry 2025-26"}</span>
-          </button>
         </div>
 
         {/* Stream Filter Pills */}
@@ -134,18 +123,10 @@ export default function AcademicCourses({ lang, onOpenApplyModal }) {
               <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                 <button
                   onClick={() => setSelectedCourseForModal(course)}
-                  className="px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-colors flex items-center gap-1.5"
+                  className="w-full py-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold text-xs transition-colors flex items-center justify-center gap-1.5"
                 >
                   <Icon name="BookOpen" className="w-3.5 h-3.5 text-blue-700" />
-                  <span>{lang === "gu" ? "વિગતવાર સિલેબસ" : "Full Syllabus"}</span>
-                </button>
-
-                <button
-                  onClick={onOpenApplyModal}
-                  className="px-3.5 py-2 rounded-lg bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs transition-colors flex items-center gap-1.5 shadow-sm"
-                >
-                  <Icon name="CheckCircle" className="w-3.5 h-3.5 text-amber-400" />
-                  <span>{lang === "gu" ? "પ્રવેશ મેળવો" : "Apply"}</span>
+                  <span>{lang === "gu" ? "વિગતવાર સિલેબસ જુઓ" : "View Full Syllabus"}</span>
                 </button>
               </div>
             </div>
@@ -216,19 +197,9 @@ export default function AcademicCourses({ lang, onOpenApplyModal }) {
               <div className="flex items-center justify-end gap-3 pt-4 border-t border-slate-200">
                 <button
                   onClick={() => setSelectedCourseForModal(null)}
-                  className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100"
+                  className="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-colors"
                 >
                   {lang === "gu" ? "બંધ કરો" : "Close"}
-                </button>
-                <button
-                  onClick={() => {
-                    setSelectedCourseForModal(null);
-                    onOpenApplyModal();
-                  }}
-                  className="px-5 py-2 rounded-xl bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold shadow-md transition-colors flex items-center gap-1.5"
-                >
-                  <Icon name="Sparkles" className="w-4 h-4 text-amber-400" />
-                  <span>{lang === "gu" ? "આ કોર્સ માટે અરજી કરો" : "Apply for this Program"}</span>
                 </button>
               </div>
             </div>

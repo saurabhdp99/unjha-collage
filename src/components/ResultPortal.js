@@ -50,7 +50,7 @@ export default function ResultPortal({ lang }) {
           enrollmentNo: `HNGU-2025-${query}`,
           studentName: `STUDENT ROLL NO #${query}`,
           collegeName: collegeInfo.name,
-          course: selectedCourse === "bcom" ? "Bachelor of Commerce (B.Com.)" : selectedCourse === "ba" ? "Bachelor of Arts (B.A.)" : "Master of Commerce (M.Com.)",
+          course: selectedCourse === "bsc-chem" ? "Bachelor of Science (B.Sc.) - Chemistry" : selectedCourse === "bsc-phy" ? "Bachelor of Science (B.Sc.) - Physics" : selectedCourse === "bsc-math" ? "Bachelor of Science (B.Sc.) - Mathematics" : "Bachelor of Science (B.Sc.) - Botany",
           semester: `Semester - ${selectedSemester.replace("sem", "")}`,
           examSession: "Summer 2025 (HNGU Patan)",
           resultStatus: "PASS - FIRST CLASS",
@@ -58,11 +58,11 @@ export default function ResultPortal({ lang }) {
           cgpa: "8.02",
           percentage: "74.8%",
           subjects: [
-            { code: "CC-101", name: "Core Course Paper - I", maxMarks: 100, intMarks: 27, extMarks: 56, totalMarks: 83, grade: "A" },
-            { code: "CC-102", name: "Core Course Paper - II", maxMarks: 100, intMarks: 26, extMarks: 53, totalMarks: 79, grade: "B+" },
-            { code: "CC-103", name: "Core Elective Discipline", maxMarks: 100, intMarks: 28, extMarks: 60, totalMarks: 88, grade: "A+" },
-            { code: "CC-104", name: "Allied Subject Specialization", maxMarks: 100, intMarks: 25, extMarks: 52, totalMarks: 77, grade: "B+" },
-            { code: "SS-101", name: "Skill Enhancement Course", maxMarks: 100, intMarks: 29, extMarks: 62, totalMarks: 91, grade: "O" }
+            { code: "CC-101", name: "Core Science Theory Paper - I", maxMarks: 100, intMarks: 27, extMarks: 56, totalMarks: 83, grade: "A" },
+            { code: "CC-102", name: "Core Science Theory Paper - II", maxMarks: 100, intMarks: 26, extMarks: 53, totalMarks: 79, grade: "B+" },
+            { code: "CC-103", name: "Core Science Subsidiary Course", maxMarks: 100, intMarks: 28, extMarks: 60, totalMarks: 88, grade: "A+" },
+            { code: "CC-104", name: "Environmental Science & Ethics", maxMarks: 100, intMarks: 25, extMarks: 52, totalMarks: 77, grade: "B+" },
+            { code: "PR-101", name: "Laboratory Practical & Viva Voce", maxMarks: 100, intMarks: 29, extMarks: 62, totalMarks: 91, grade: "O" }
           ]
         });
       }
@@ -105,12 +105,10 @@ export default function ResultPortal({ lang }) {
                 onChange={(e) => setSelectedCourse(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm font-medium text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none"
               >
-                <option value="bcom">B.Com. (Bachelor of Commerce)</option>
-                <option value="ba">B.A. (Bachelor of Arts)</option>
-                <option value="mcom">M.Com. (Master of Commerce)</option>
-                <option value="ma">M.A. (Master of Arts)</option>
-                <option value="bba">BBA (Business Administration)</option>
-                <option value="llb">LL.B. (Seth V. S. Law College)</option>
+                <option value="bsc-chem">B.Sc. (Chemistry)</option>
+                <option value="bsc-phy">B.Sc. (Physics)</option>
+                <option value="bsc-math">B.Sc. (Mathematics)</option>
+                <option value="bsc-bot">B.Sc. (Botany / Biosciences)</option>
               </select>
             </div>
 
@@ -208,7 +206,7 @@ export default function ResultPortal({ lang }) {
                       {searchedResult.collegeName}
                     </div>
                     <div className="text-xs text-slate-300 font-mono mt-0.5">
-                      College Code: 021 | AISHE: C-6548 | Unjha, Dist. Mehsana
+                      College Code: {collegeInfo.hnguCode} | AISHE: {collegeInfo.aisheCode} | MRS Highschool Campus, Unjha, Dist. Mehsana
                     </div>
                   </div>
                 </div>

@@ -5,37 +5,37 @@ import Image from "next/image";
 import { Icon } from "./Icons";
 import { marqueeAnnouncements, collegeInfo } from "@/data/collegeData";
 
-export default function UrbanHeroSlider({ lang, onOpenApplyModal, onNavigateSection }) {
+export default function UrbanHeroSlider({ lang, onNavigateSection }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      title: lang === "gu" ? "૬૦+ વર્ષોનો ગૌરવશાળી શૈક્ષણિક વારસો" : "60+ Years of Academic Excellence & Legacy",
-      subtitle: lang === "gu" ? "ઉત્તર ગુજરાતનું અગ્રણી ઉચ્ચ શિક્ષણ સંકુલ - ઊંઝા" : "Premier Higher Education Institution in North Gujarat, Unjha",
-      badge: lang === "gu" ? "સ્થાપના: ૧૯૬૫ • શ્રી ઊંઝા કેળવણી મંડળ" : "Est. 1965 • Managed by Shri Unjha Kelavani Mandal",
+      title: lang === "gu" ? "વિજ્ઞાન શિક્ષણ અને સંશોધનમાં અગ્રેસર" : "Advancing Science, Research & Academic Excellence",
+      subtitle: lang === "gu" ? "ડૉ. આશાબેન પટેલ સરકારી વિજ્ઞાન કોલેજ, ઊંઝા (જી. મહેસાણા)" : "Dr. Ashaben Patel Government Science College, Unjha (Dist. Mehsana)",
+      badge: lang === "gu" ? "શિક્ષણ વિભાગ, ગુજરાત સરકાર • એમ. આર. એસ. કેમ્પસ" : "Govt. of Gujarat • MRS Highschool Campus",
       image: "/images/campus_front.jpg",
-      highlight: "NAAC 'B' Grade (CGPA 2.75) • UGC 2(f) & 12(B)",
+      highlight: "Government Science College • HNGU Code: 879",
     },
     {
-      title: lang === "gu" ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી પરિણામોમાં અગ્રેસર" : "Consistently Leading in HNGU University Exam Results",
-      subtitle: lang === "gu" ? "B.Com., B.A., M.Com., M.A., BBA અને Law અભ્યાસક્રમો" : "Offering UG & PG Degrees with 96.4% University Pass Rate",
-      badge: lang === "gu" ? "HNGU કોલેજ કોડ: ૦૨૧ • પાટણ" : "HNGU College Code: 021 • Patan",
+      title: lang === "gu" ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી પરિણામોમાં શ્રેષ્ઠ" : "Consistently Leading in HNGU University Exam Results",
+      subtitle: lang === "gu" ? "B.Sc. કેમિસ્ટ્રી, ફિઝિક્સ, મેથેમેટિક્સ અને બોટની અભ્યાસક્રમો" : "Offering B.Sc. Degrees in Chemistry, Physics, Mathematics & Botany",
+      badge: lang === "gu" ? "HNGU કોલેજ કોડ: ૮૭૯ • પાટણ" : "HNGU College Code: 879 • Patan",
       image: "/images/convocation.jpg",
-      highlight: "Gold Medalists & Top University Rankers",
+      highlight: "98.2% University Exam Pass Rate & Distinction Scholars",
     },
     {
-      title: lang === "gu" ? "અદ્યતન કેન્દ્રીય પુસ્તકાલય & ડિજિટલ સ્ત્રોત" : "Central Knowledge Repository & INFLIBNET N-LIST",
-      subtitle: lang === "gu" ? "૫૨,૦૦૦+ પુસ્તકો, ઇ-જર્નલ્સ, કમ્પ્યુટર અને ભાષા લેબ" : "52,000+ Books, Automated SOUL 3.0, 80+ Core i7 IT Lab",
-      badge: lang === "gu" ? "ડિજિટલ કેમ્પસ સુવિધાઓ" : "Modern Digital Campus Infrastructure",
+      title: lang === "gu" ? "અદ્યતન સાયન્સ લેબ્સ & કેન્દ્રીય સંશોધન પુસ્તકાલય" : "Advanced Science Laboratories & Research Library",
+      subtitle: lang === "gu" ? "કેમિસ્ટ્રી, ફિઝિક્સ, બોટની લેબોરેટરીઝ અને INFLIBNET N-LIST" : "Sophisticated Wet Chemistry, Laser Physics & Digital Herbarium",
+      badge: lang === "gu" ? "અદ્યતન પ્રાયોગિક સંકુલ" : "Modern Scientific Infrastructure",
       image: "/images/library.jpg",
-      highlight: "Wi-Fi Enabled Smart Classrooms & High-Speed Fiber",
+      highlight: "Fume Hoods, Laser Darkroom, Digital Spectrophotometers",
     },
     {
-      title: lang === "gu" ? "યુવા મહોત્સવ અને રમતગમતમાં શ્રેષ્ઠ પ્રદર્શન" : "Champions in HNGU Inter-College Youth Festival & Sports",
-      subtitle: lang === "gu" ? "NSS, NCC, ૪૦૦ મીટર ટ્રેક, ક્રિકેટ મેદાન અને ઇન્ડોર જિમ" : "Active Youth Leadership, 200 NSS Volunteers & NCC Cadets",
-      badge: lang === "gu" ? "સર્વાંગી વિદ્યાર્થી વિકાસ" : "Holistic Student Personality Development",
+      title: lang === "gu" ? "રાજ્ય વિજ્ઞાન મેળો, રમતગમત અને NSS યુવા પ્રવૃત્તિઓ" : "State Science Fairs, NSS Leadership & Campus Sports",
+      subtitle: lang === "gu" ? "એમ. આર. એસ. હાઇસ્કૂલ કેમ્પસ રમતગમત મેદાન અને સર્વાંગી વિકાસ" : "Active Scientific Temper & Holistic Student Personality at MRS Campus",
+      badge: lang === "gu" ? "સર્વાંગી વિદ્યાર્થી વિકાસ" : "Holistic Student Development",
       image: "/images/youth_festival.jpg",
-      highlight: "Winners of HNGU North Zone Youth Trophy 2025",
+      highlight: "Winners in HNGU Inter-College Science & Sports Meets",
     },
   ];
 
@@ -97,19 +97,19 @@ export default function UrbanHeroSlider({ lang, onOpenApplyModal, onNavigateSect
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                 <button
-                  onClick={onOpenApplyModal}
+                  onClick={() => onNavigateSection("departments")}
                   className="px-6 py-2.5 sm:py-3 rounded-lg bg-[#800000] hover:bg-[#600000] text-white font-extrabold text-xs sm:text-sm shadow-xl transition-transform hover:scale-105 flex items-center gap-2 border border-amber-400/50"
                 >
-                  <Icon name="Sparkles" className="w-4 h-4 text-amber-300" />
-                  <span>{lang === "gu" ? "ઓનલાઇન પ્રવેશ મેળવો" : "Apply for Admission"}</span>
+                  <Icon name="BookOpen" className="w-4 h-4 text-amber-300" />
+                  <span>{lang === "gu" ? "અભ્યાસક્રમો અને વિભાગો જુઓ" : "Explore Academic Programs"}</span>
                 </button>
 
                 <button
-                  onClick={() => onNavigateSection("departments")}
+                  onClick={() => onNavigateSection("contact-section")}
                   className="px-6 py-2.5 sm:py-3 rounded-lg bg-black/40 hover:bg-black/60 text-white font-bold text-xs sm:text-sm backdrop-blur-md border border-white/40 transition-all flex items-center gap-2 shadow-lg"
                 >
-                  <Icon name="BookOpen" className="w-4 h-4 text-amber-300" />
-                  <span>{lang === "gu" ? "અભ્યાસક્રમો જુઓ" : "Explore Courses"}</span>
+                  <Icon name="MapPin" className="w-4 h-4 text-amber-300" />
+                  <span>{lang === "gu" ? "કેમ્પસ મુલાકાત & સંપર્ક" : "Campus Location & Helpdesk"}</span>
                 </button>
               </div>
 

@@ -51,7 +51,7 @@ export default function UrbanPrincipalDesk({ lang }) {
             </div>
 
             <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-              <span className="font-bold text-[#1b3557]">Dr. K. M. Patel</span>
+              <span className="font-bold text-[#1b3557]">{administration.principalName}</span>
               <span className="italic">{collegeInfo.shortName}</span>
             </div>
           </div>
@@ -69,13 +69,13 @@ export default function UrbanPrincipalDesk({ lang }) {
                 </div>
                 <div>
                   <span className="text-[11px] font-extrabold uppercase text-[#800000] tracking-wider">
-                    {lang === "gu" ? "સંચાલક મંડળ" : "Management Body"}
+                    {lang === "gu" ? "શાસક મંડળ" : "Government Body"}
                   </span>
                   <h3 className="text-lg sm:text-xl font-black text-[#1b3557] leading-snug">
                     {collegeInfo.trustName}
                   </h3>
                   <p className="text-xs text-slate-500 font-medium">
-                    Serving Higher Education Since 1965
+                    Higher Education Department, Gujarat
                   </p>
                 </div>
               </div>
@@ -101,8 +101,8 @@ export default function UrbanPrincipalDesk({ lang }) {
             </div>
 
             <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-              <span className="font-bold text-[#800000]">Shri Unjha Kelavani Mandal</span>
-              <span className="italic">Unjha, Dist. Mehsana</span>
+              <span className="font-bold text-[#800000]">Govt. of Gujarat • Higher Education</span>
+              <span className="italic">MRS Highschool Campus, Unjha, Dist. Mehsana</span>
             </div>
           </div>
         </div>

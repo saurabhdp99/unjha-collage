@@ -12,24 +12,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Shri B. P. Brahmbhatt Arts & M. H. Guru Commerce College, Unjha | HNGU Patan Affiliated",
-  description: "Official web portal of Shri B. P. Brahmbhatt Arts and M. H. Guru Commerce College, Unjha (Est. 1965). NAAC Accredited, UGC Recognized, affiliated with Hemchandracharya North Gujarat University (HNGU), Patan. Offers B.Com, B.A., M.Com, M.A., BBA, LL.B., BAOU programs, online HNGU results, digital notices, and scholarships.",
+  title: "Dr. Ashaben Patel Government Science College, Unjha | HNGU Patan Affiliated",
+  description: "Official web portal of Dr. Ashaben Patel Government Science College, Unjha, Dist. Mehsana, Gujarat. MRS Highschool Campus. Affiliated with Hemchandracharya North Gujarat University (HNGU), Patan (College Code: 879, AISHE: C-64881). Offers B.Sc. (Chemistry, Physics, Mathematics, Botany), BAOU programs, online HNGU results, digital notices, and scholarships.",
   keywords: [
-    "Unjha College",
-    "B P Brahmbhatt Arts College",
-    "M H Guru Commerce College",
-    "HNGU College Unjha",
+    "Dr. Ashaben Patel Government Science College",
+    "Government Science College Unjha",
+    "APGSC Unjha",
+    "Unjha Science College",
+    "HNGU College Code 879",
+    "AISHE C-64881",
+    "MRS Highschool Campus Unjha",
+    "Science College Mehsana",
     "HNGU Patan Results",
-    "Unjha Education Board",
-    "Unjha Kelavani Mandal",
-    "Seth V S Law College Unjha",
-    "North Gujarat College",
-    "B.Com Unjha",
-    "B.A. Gujarati Unjha"
+    "B.Sc. Chemistry Unjha",
+    "B.Sc. Physics Unjha",
+    "B.Sc. Mathematics Unjha",
+    "B.Sc. Botany Unjha",
+    "Government College Gujarat"
   ],
-  authors: [{ name: "Unjha College Administration" }],
+  authors: [{ name: "Dr. Ashaben Patel Government Science College Administration" }],
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#1e3a8a",
+  themeColor: "#1b3557",
 };
 
 export default function RootLayout({ children }) {

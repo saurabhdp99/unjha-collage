@@ -5,7 +5,7 @@ import { Icon } from "./Icons";
 import { collegeInfo } from "@/data/collegeData";
 import { translations } from "@/data/translations";
 
-export default function Header({ lang, setLang, onOpenApplyModal, onNavigateSection }) {
+export default function Header({ lang, setLang, onNavigateSection }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[lang];
 
@@ -40,7 +40,7 @@ export default function Header({ lang, setLang, onOpenApplyModal, onNavigateSect
             </span>
             <span className="text-slate-600 hidden sm:inline">|</span>
             <span className="text-slate-300">
-              {lang === "gu" ? "HNGU કોલેજ કોડ: 021" : "HNGU Code: 021"}
+              {lang === "gu" ? `HNGU કોલેજ કોડ: ${collegeInfo.hnguCode}` : `HNGU Code: ${collegeInfo.hnguCode}`}
             </span>
             <span className="text-slate-600 hidden sm:inline">|</span>
             <span className="text-slate-300">AISHE: {collegeInfo.aisheCode}</span>
@@ -95,16 +95,8 @@ export default function Header({ lang, setLang, onOpenApplyModal, onNavigateSect
           </div>
         </div>
 
-        {/* Desktop Actions */}
-        <div className="hidden xl:flex items-center gap-3">
-          <button
-            onClick={onOpenApplyModal}
-            className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-900 to-indigo-800 hover:from-blue-800 hover:to-indigo-700 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2"
-          >
-            <Icon name="Sparkles" className="w-4 h-4 text-amber-400" />
-            <span>{t.applyNow}</span>
-          </button>
-        </div>
+        {/* Right side spacer */}
+        <div className="hidden xl:flex items-center gap-3"></div>
 
         {/* Mobile Menu Button */}
         <button
@@ -165,19 +157,6 @@ export default function Header({ lang, setLang, onOpenApplyModal, onNavigateSect
                 <Icon name="ChevronRight" className="w-4 h-4 text-slate-400" />
               </button>
             ))}
-
-            <div className="pt-4 mt-2 border-t border-slate-800 flex flex-col gap-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenApplyModal();
-                }}
-                className="w-full py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-center flex items-center justify-center gap-2 shadow-lg"
-              >
-                <Icon name="Sparkles" className="w-4 h-4" />
-                <span>{t.applyNow}</span>
-              </button>
-            </div>
           </div>
         </div>
       )}

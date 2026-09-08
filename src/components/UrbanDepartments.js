@@ -4,16 +4,13 @@ import React, { useState } from "react";
 import { Icon } from "./Icons";
 import { academicPrograms } from "@/data/collegeData";
 
-export default function UrbanDepartments({ lang, onOpenApplyModal }) {
+export default function UrbanDepartments({ lang }) {
   const [activeStream, setActiveStream] = useState("All");
   const [selectedCourseForModal, setSelectedCourseForModal] = useState(null);
 
   const streamFilters = [
-    { id: "All", label: lang === "gu" ? "તમામ વિભાગો" : "All Departments" },
-    { id: "Commerce", label: lang === "gu" ? "કોમર્સ વિભાગ (B.Com / M.Com)" : "Commerce Dept" },
-    { id: "Arts", label: lang === "gu" ? "આર્ટ્સ ફેકલ્ટી (B.A. / M.A.)" : "Arts Faculty" },
-    { id: "Management", label: lang === "gu" ? "મેનેજમેન્ટ સ્ટડીઝ (BBA)" : "Management (BBA)" },
-    { id: "Law", label: lang === "gu" ? "સેઠ વી. એસ. લો કોલેજ (LL.B.)" : "Law College (LL.B.)" },
+    { id: "All", label: lang === "gu" ? "તમામ વિજ્ઞાન વિભાગો" : "All Science Depts" },
+    { id: "Science", label: lang === "gu" ? "વિજ્ઞાન શાખા (B.Sc. Programs)" : "B.Sc. Science Programs" },
     { id: "Open Learning", label: lang === "gu" ? "BAOU મુક્ત શિક્ષણ કેન્દ્ર" : "BAOU Open Centre" },
   ];
 
@@ -122,18 +119,10 @@ export default function UrbanDepartments({ lang, onOpenApplyModal }) {
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
                   <button
                     onClick={() => setSelectedCourseForModal(course)}
-                    className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-colors flex items-center gap-1"
+                    className="w-full py-2 rounded-lg bg-[#1b3557] hover:bg-[#294a73] text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-sm"
                   >
-                    <Icon name="BookOpen" className="w-3.5 h-3.5 text-blue-900" />
-                    <span>{lang === "gu" ? "સિલેબસ" : "Syllabus"}</span>
-                  </button>
-
-                  <button
-                    onClick={onOpenApplyModal}
-                    className="px-3.5 py-1.5 rounded-lg bg-[#800000] hover:bg-[#600000] text-white text-xs font-bold transition-colors flex items-center gap-1 shadow-sm"
-                  >
-                    <Icon name="Sparkles" className="w-3.5 h-3.5 text-amber-300" />
-                    <span>{lang === "gu" ? "પ્રવેશ મેળવો" : "Apply Now"}</span>
+                    <Icon name="BookOpen" className="w-3.5 h-3.5 text-amber-300" />
+                    <span>{lang === "gu" ? "સિલેબસ અને વિષયો જુઓ" : "View Curriculum & Syllabus"}</span>
                   </button>
                 </div>
               </div>
@@ -199,18 +188,9 @@ export default function UrbanDepartments({ lang, onOpenApplyModal }) {
               <div className="flex items-center justify-end gap-2 pt-3 border-t border-slate-200">
                 <button
                   onClick={() => setSelectedCourseForModal(null)}
-                  className="px-4 py-2 rounded-lg bg-slate-100 text-xs font-bold text-slate-700 hover:bg-slate-200"
+                  className="px-5 py-2 rounded-lg bg-[#1b3557] hover:bg-[#294a73] text-white text-xs font-bold transition-colors"
                 >
                   Close
-                </button>
-                <button
-                  onClick={() => {
-                    setSelectedCourseForModal(null);
-                    onOpenApplyModal();
-                  }}
-                  className="px-5 py-2 rounded-lg bg-[#800000] text-white text-xs font-bold hover:bg-[#600000] shadow-sm"
-                >
-                  Apply for this Course
                 </button>
               </div>
             </div>

@@ -5,7 +5,7 @@ import { Icon } from "./Icons";
 import { collegeInfo } from "@/data/collegeData";
 import { translations } from "@/data/translations";
 
-export default function Footer({ lang, onNavigateSection, onOpenApplyModal }) {
+export default function Footer({ lang, onNavigateSection }) {
   const t = translations[lang];
 
   return (
@@ -24,29 +24,29 @@ export default function Footer({ lang, onNavigateSection, onOpenApplyModal }) {
                   {lang === "gu" ? collegeInfo.gujaratiName : collegeInfo.name}
                 </div>
                 <div className="text-xs text-amber-400 font-semibold mt-0.5">
-                  Est. 1965 • {collegeInfo.trustName}
+                  Govt. of Gujarat • {collegeInfo.campus}
                 </div>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed mb-4">
               {lang === "gu"
-                ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન ઉત્તર ગુજરાતનું અગ્રણી ઉચ્ચ શિક્ષણ સંસ્થાન."
-                : "Dedicated to academic excellence, ethical grounding, and youth empowerment in North Gujarat under Hemchandracharya North Gujarat University (HNGU), Patan."}
+                ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન ઉત્તર ગુજરાતનું અગ્રણી સરકારી વિજ્ઞાન મહાવિદ્યાલય."
+                : "Dedicated to scientific excellence, empirical research, and youth empowerment in North Gujarat under Hemchandracharya North Gujarat University (HNGU), Patan."}
             </p>
 
             <div className="space-y-1.5 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <Icon name="Award" className="w-4 h-4 text-amber-400" />
-                <span>NAAC Accredited 'B' Grade (CGPA 2.75)</span>
+                <span>Government Science College</span>
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="CheckCircle" className="w-4 h-4 text-emerald-400" />
-                <span>UGC 2(f) & 12(B) Permanent Status</span>
+                <span>Education Department, Govt. of Gujarat</span>
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="ShieldCheck" className="w-4 h-4 text-blue-400" />
-                <span>AISHE Code: {collegeInfo.aisheCode} | HNGU: 021</span>
+                <span>AISHE Code: {collegeInfo.aisheCode} | HNGU: {collegeInfo.hnguCode}</span>
               </div>
             </div>
           </div>
@@ -113,11 +113,11 @@ export default function Footer({ lang, onNavigateSection, onOpenApplyModal }) {
               </li>
               <li>
                 <button
-                  onClick={onOpenApplyModal}
+                  onClick={() => onNavigateSection("contact")}
                   className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-blue-400 font-bold"
                 >
                   <Icon name="ChevronRight" className="w-3.5 h-3.5 text-blue-400" />
-                  <span>{t.applyNow}</span>
+                  <span>{t.navContact}</span>
                 </button>
               </li>
             </ul>
@@ -213,6 +213,11 @@ export default function Footer({ lang, onNavigateSection, onOpenApplyModal }) {
               <div className="flex items-center gap-2.5">
                 <Icon name="Phone" className="w-4 h-4 text-amber-400 shrink-0" />
                 <span className="font-mono">{collegeInfo.phone}</span>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <Icon name="Printer" className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Fax: <span className="font-mono">{collegeInfo.fax}</span></span>
               </div>
 
               <div className="flex items-center gap-2.5">

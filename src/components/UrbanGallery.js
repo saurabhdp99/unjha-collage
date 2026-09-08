@@ -22,7 +22,7 @@ export default function UrbanGallery({ lang }) {
       icon: "Award",
     },
     {
-      title: lang === "gu" ? "શ્રી બી. પી. બ્રહ્મભટ્ટ કોલેજ મુખ્ય સંકુલ ઇમારત" : "Shri B. P. Brahmbhatt Main Campus & Administrative Tower",
+      title: lang === "gu" ? "ડૉ. આશાબેન પટેલ સરકારી વિજ્ઞાન કોલેજ સંકુલ (એમ.આર.એસ. હાઇસ્કૂલ કેમ્પસ)" : "Dr. Ashaben Patel Govt. Science College (MRS Highschool Campus)",
       category: "Campus",
       date: "Oct 2024",
       image: "/images/campus_front.jpg",
@@ -123,7 +123,7 @@ export default function UrbanGallery({ lang }) {
 
               {/* Card Footer */}
               <div className="p-3 bg-white flex items-center justify-between text-xs text-slate-500 font-semibold">
-                <span>Shri Unjha College Campus</span>
+                <span>MRS Highschool Campus, Unjha</span>
                 <span className="text-[#800000] font-bold group-hover:underline">View Photo →</span>
               </div>
             </div>

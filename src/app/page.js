@@ -12,11 +12,9 @@ import UrbanGallery from "@/components/UrbanGallery";
 import AlumniAndRecruiters from "@/components/AlumniAndRecruiters";
 import FAQSection from "@/components/FAQSection";
 import UrbanFooter from "@/components/UrbanFooter";
-import AdmissionModal from "@/components/AdmissionModal";
 
 export default function Home() {
   const [lang, setLang] = useState("en"); // 'en' | 'gu'
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
   const handleNavigateSection = (sectionId) => {
     const el = document.getElementById(sectionId);
@@ -31,7 +29,6 @@ export default function Home() {
       <UrbanHeader
         lang={lang}
         setLang={setLang}
-        onOpenApplyModal={() => setIsApplyModalOpen(true)}
         onNavigateSection={handleNavigateSection}
       />
 
@@ -40,21 +37,18 @@ export default function Home() {
         {/* 2. HERO SLIDER BANNER WITH MARQUEE FLASH NEWS */}
         <UrbanHeroSlider
           lang={lang}
-          onOpenApplyModal={() => setIsApplyModalOpen(true)}
           onNavigateSection={handleNavigateSection}
         />
 
         {/* 3. SIGNATURE 3-COLUMN MEHSANA URBAN HOMEPAGE GRID (About | Notices | Quick Links) */}
         <UrbanHomeGrid
           lang={lang}
-          onOpenApplyModal={() => setIsApplyModalOpen(true)}
           onNavigateSection={handleNavigateSection}
         />
 
         {/* 4. ACADEMIC DEPARTMENTS & NEP 2020 COURSES */}
         <UrbanDepartments
           lang={lang}
-          onOpenApplyModal={() => setIsApplyModalOpen(true)}
         />
 
         {/* 5. PRESIDENT & PRINCIPAL'S DESK + IQAC NAAC SECTION */}
@@ -80,14 +74,6 @@ export default function Home() {
       <UrbanFooter
         lang={lang}
         onNavigateSection={handleNavigateSection}
-        onOpenApplyModal={() => setIsApplyModalOpen(true)}
-      />
-
-      {/* MODAL: ONLINE ADMISSION INQUIRY (2025-26) */}
-      <AdmissionModal
-        lang={lang}
-        isOpen={isApplyModalOpen}
-        onClose={() => setIsApplyModalOpen(false)}
       />
     </div>
   );

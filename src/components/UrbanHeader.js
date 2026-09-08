@@ -8,7 +8,6 @@ import { translations } from "@/data/translations";
 export default function UrbanHeader({
   lang,
   setLang,
-  onOpenApplyModal,
   onNavigateSection,
   activeSection,
 }) {
@@ -33,11 +32,11 @@ export default function UrbanHeader({
       id: "departments",
       label: lang === "gu" ? "વિભાગો & અભ્યાસક્રમો" : "Departments",
       dropdown: [
-        { id: "departments", label: "Commerce Department (B.Com / M.Com)" },
-        { id: "departments", label: "Arts Faculty (B.A. / M.A.)" },
-        { id: "departments", label: "Management Studies (BBA)" },
-        { id: "departments", label: "Seth V. S. Law College (LL.B.)" },
-        { id: "departments", label: "BAOU Distance Centre (1502)" },
+        { id: "departments", label: "Department of Chemistry (B.Sc.)" },
+        { id: "departments", label: "Department of Physics (B.Sc.)" },
+        { id: "departments", label: "Department of Mathematics (B.Sc.)" },
+        { id: "departments", label: "Department of Botany (B.Sc.)" },
+        { id: "departments", label: "BAOU Open Learning Centre (1502)" },
       ],
     },
     {
@@ -73,14 +72,14 @@ export default function UrbanHeader({
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-slate-200">
             <span className="font-semibold text-amber-300 flex items-center gap-1">
               <Icon name="Award" className="w-3.5 h-3.5" />
-              NAAC 'B' (CGPA 2.75)
+              Govt. Science College
             </span>
             <span className="text-slate-400">|</span>
-            <span>HNGU Code: 021</span>
+            <span>HNGU Code: {collegeInfo.hnguCode}</span>
             <span className="text-slate-400 hidden sm:inline">|</span>
             <span className="hidden sm:inline">AISHE: {collegeInfo.aisheCode}</span>
             <span className="text-slate-400 hidden md:inline">|</span>
-            <span className="text-emerald-300 font-medium hidden md:inline">{collegeInfo.ugcStatus}</span>
+            <span className="text-emerald-300 font-medium hidden md:inline">{collegeInfo.campus}, Unjha</span>
           </div>
 
           {/* Right Action Icons */}
@@ -119,11 +118,11 @@ export default function UrbanHeader({
             </div>
 
             <div>
-              {/* Trust Subheading */}
+              {/* Trust / Governance Subheading */}
               <div className="text-[11px] sm:text-xs font-bold text-[#800000] tracking-wide uppercase">
                 {lang === "gu"
-                  ? "શ્રી ઊંઝા કેળવણી મંડળ સંચાલિત (સ્થાપના: ૧૯૬૫)"
-                  : "Managed by Shri Unjha Kelavani Mandal / Unjha Education Board (Est. 1965)"}
+                  ? "શિક્ષણ વિભાગ, ગુજરાત સરકાર • એમ. આર. એસ. હાઇસ્કૂલ કેમ્પસ, ઊંઝા (જી. મહેસાણા)"
+                  : "Government of Gujarat • MRS Highschool Campus, Unjha (Dist. Mehsana)"}
               </div>
 
               {/* Main College Name */}
@@ -134,7 +133,7 @@ export default function UrbanHeader({
               {/* Affiliation & Motto */}
               <div className="text-[11px] sm:text-xs text-slate-600 font-medium flex flex-wrap items-center justify-center md:justify-start gap-2 mt-0.5">
                 <span className="text-[#800000] font-semibold">
-                  {lang === "gu" ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU) સંલગ્ન" : "Affiliated to HNGU Patan (College Code: 021)"}
+                  {lang === "gu" ? `હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU) સંલગ્ન (કોડ: ${collegeInfo.hnguCode})` : `Affiliated to HNGU Patan (College Code: ${collegeInfo.hnguCode})`}
                 </span>
                 <span className="text-slate-300 hidden sm:inline">•</span>
                 <span className="italic text-slate-500 font-serif">
@@ -144,16 +143,8 @@ export default function UrbanHeader({
             </div>
           </div>
 
-          {/* Top CTAs */}
+          {/* Right Action / Mobile Menu Button */}
           <div className="flex items-center gap-2.5 shrink-0">
-            <button
-              onClick={onOpenApplyModal}
-              className="px-4 py-2 rounded-lg bg-[#800000] hover:bg-[#600000] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-1.5"
-            >
-              <Icon name="Sparkles" className="w-4 h-4 text-amber-400" />
-              <span>{lang === "gu" ? "ઓનલાઇન પ્રવેશ ૨૦૨૫-૨૬" : "Admission 2025-26"}</span>
-            </button>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -240,19 +231,6 @@ export default function UrbanHeader({
                 )}
               </div>
             ))}
-
-            <div className="pt-4 flex flex-col gap-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenApplyModal();
-                }}
-                className="w-full py-2.5 rounded-lg bg-[#800000] text-white font-bold text-xs flex items-center justify-center gap-1.5"
-              >
-                <Icon name="Sparkles" className="w-4 h-4 text-amber-400" />
-                <span>{lang === "gu" ? "ઓનલાઇન પ્રવેશ ૨૦૨૫-૨૬" : "Admission 2025-26"}</span>
-              </button>
-            </div>
           </div>
         </div>
       )}

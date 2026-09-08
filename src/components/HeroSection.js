@@ -5,7 +5,7 @@ import { Icon } from "./Icons";
 import { collegeInfo, marqueeAnnouncements } from "@/data/collegeData";
 import { translations } from "@/data/translations";
 
-export default function HeroSection({ lang, onOpenApplyModal, onNavigateSection }) {
+export default function HeroSection({ lang, onNavigateSection }) {
   const t = translations[lang];
 
   return (
@@ -47,24 +47,24 @@ export default function HeroSection({ lang, onOpenApplyModal, onNavigateSection 
                 <Icon name="Award" className="w-4 h-4 text-amber-400" />
                 <span>
                   {lang === "gu" 
-                    ? "સ્થાપના ૧૯૬૫ • ૬૦ વર્ષથી અવિરત શિક્ષણ યાત્રા" 
-                    : "Est. 1965 • 60+ Years of Educational Legacy"}
+                    ? `શિક્ષણ વિભાગ, ગુજરાત સરકાર • એમ. આર. એસ. કેમ્પસ` 
+                    : `Govt. of Gujarat • MRS Highschool Campus, Unjha`}
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                <span className="text-slate-300">NAAC 'B' (CGPA 2.75)</span>
+                <span className="text-slate-300">HNGU Code: {collegeInfo.hnguCode}</span>
               </div>
 
               {/* Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6">
                 {lang === "gu" ? (
                   <>
-                    <span className="text-white">શિક્ષણ, સંસ્કાર અને</span>{" "}
-                    <span className="gold-gradient-text">યુવા સશક્તિકરણ</span>{" "}
+                    <span className="text-white">વિજ્ઞાન શિક્ષણ અને</span>{" "}
+                    <span className="gold-gradient-text">સંશોધન શ્રેષ્ઠતા</span>{" "}
                     <span className="text-blue-200">ઊંઝા કેમ્પસ</span>
                   </>
                 ) : (
                   <>
-                    <span className="text-white">Empowering Futures,</span>{" "}
+                    <span className="text-white">Advancing Science,</span>{" "}
                     <span className="gold-gradient-text">Inspiring Excellence</span>{" "}
                     <span className="text-blue-200">in North Gujarat</span>
                   </>
@@ -74,18 +74,18 @@ export default function HeroSection({ lang, onOpenApplyModal, onNavigateSection 
               {/* Description */}
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
                 {lang === "gu"
-                  ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન શ્રી બી. પી. બ્રહ્મભટ્ટ આર્ટ્સ અને એમ. એચ. ગુરુ કોમર્સ કોલેજ, ઊંઝા. ઉત્તર ગુજરાતના વિદ્યાર્થીઓ માટે અદ્યતન શૈક્ષણિક સંકુલ, અનુભવી અધ્યાપકો અને કારકિર્દી નિર્માણનું કેન્દ્ર."
-                  : "Premier higher education institution under Hemchandracharya North Gujarat University (HNGU), Patan. Nurturing future leaders in Commerce, Arts, Management, and Law with rich academic infrastructure and holistic development."}
+                  ? "હેમચંદ્રાચાર્ય ઉત્તર ગુજરાત યુનિવર્સિટી (HNGU), પાટણ સંલગ્ન ડૉ. આશાબેન પટેલ સરકારી વિજ્ઞાન કોલેજ, ઊંઝા. એમ. આર. એસ. હાઇસ્કૂલ કેમ્પસ ખાતે અદ્યતન સાયન્સ લેબ્સ અને અનુભવી અધ્યાપકો સાથે B.Sc. વિજ્ઞાન શિક્ષણનું કેન્દ્ર."
+                  : "Premier government science institution under Hemchandracharya North Gujarat University (HNGU), Patan. Located at MRS Highschool Campus, Unjha, fostering excellence in Chemistry, Physics, Mathematics, and Botany with modern laboratory infrastructure."}
               </p>
 
               {/* Call to Actions */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <button
-                  onClick={onOpenApplyModal}
+                  onClick={() => onNavigateSection("academics")}
                   className="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm sm:text-base shadow-lg hover:shadow-amber-500/20 hover:-translate-y-0.5 transition-all flex items-center gap-2"
                 >
-                  <Icon name="Sparkles" className="w-5 h-5" />
-                  <span>{t.applyNow}</span>
+                  <Icon name="BookOpen" className="w-5 h-5" />
+                  <span>{t.exploreCourses}</span>
                 </button>
 
                 <button
@@ -133,7 +133,7 @@ export default function HeroSection({ lang, onOpenApplyModal, onNavigateSection 
                       {lang === "gu" ? "HNGU કાયમી માન્યતા" : "Permanent HNGU Affiliation"}
                     </div>
                     <div className="text-slate-500 text-xs">
-                      {lang === "gu" ? "કોલેજ કોડ: ૦૨૧ • પાટણ યુનિવર્સિટી" : "College Code: 021 • Patan University"}
+                      {lang === "gu" ? `કોલેજ કોડ: ${collegeInfo.hnguCode} • પાટણ યુનિવર્સિટી` : `College Code: ${collegeInfo.hnguCode} • Patan University`}
                     </div>
                   </div>
                 </div>
