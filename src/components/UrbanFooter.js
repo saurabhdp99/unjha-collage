@@ -8,8 +8,8 @@ export default function UrbanFooter({ lang, onNavigateSection }) {
   return (
     <footer id="contact-section" className="bg-[#112233] text-slate-300 pt-12 pb-8 border-t-4 border-[#800000] font-sans">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Main 4-Column Grid (Mehsana Urban College Footer Style) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        {/* Main 3-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {/* Col 1: College Emblem & Profile */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -80,12 +80,6 @@ export default function UrbanFooter({ lang, onNavigateSection }) {
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigateSection("scholarship-section")} className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                  <Icon name="ChevronRight" className="w-3 h-3 text-slate-500" />
-                  <span>MYSY & Digital Gujarat Scholarships</span>
-                </button>
-              </li>
-              <li>
                 <button onClick={() => onNavigateSection("iqac-section")} className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-emerald-400 font-bold">
                   <Icon name="ChevronRight" className="w-3 h-3 text-emerald-400" />
                   <span>IQAC & Academic Excellence</span>
@@ -94,47 +88,7 @@ export default function UrbanFooter({ lang, onNavigateSection }) {
             </ul>
           </div>
 
-          {/* Col 3: HNGU & Government Links */}
-          <div>
-            <h4 className="text-sm font-black text-white uppercase tracking-wider mb-3.5 border-b border-slate-700 pb-2 flex items-center gap-1.5">
-              <span className="w-2 h-2 bg-[#800000] rounded-full"></span>
-              <span>{lang === "gu" ? "યુનિવર્સિટી & સરકારી પોર્ટલ્સ" : "HNGU & Useful Portals"}</span>
-            </h4>
-            <ul className="space-y-1.5 text-xs">
-              <li>
-                <a href="https://www.ngu.ac.in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                  <Icon name="ExternalLink" className="w-3 h-3 text-slate-500" />
-                  <span>HNGU Patan Official Portal</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.digitalgujarat.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                  <Icon name="ExternalLink" className="w-3 h-3 text-slate-500" />
-                  <span>Digital Gujarat Scholarships</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://mysy.guj.nic.in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                  <Icon name="ExternalLink" className="w-3 h-3 text-slate-500" />
-                  <span>MYSY Portal Gujarat</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://baou.edu.in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                  <Icon name="ExternalLink" className="w-3 h-3 text-slate-500" />
-                  <span>BAOU Open University (1502)</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://che.gujarat.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                  <Icon name="ExternalLink" className="w-3 h-3 text-slate-500" />
-                  <span>Commissioner of Higher Education</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 4: Campus Contact Details */}
+          {/* Col 3: Campus Contact Details */}
           <div>
             <h4 className="text-sm font-black text-white uppercase tracking-wider mb-3.5 border-b border-slate-700 pb-2 flex items-center gap-1.5">
               <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>

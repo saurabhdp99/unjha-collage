@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Icon } from "./Icons";
 import { notices, collegeInfo } from "@/data/collegeData";
 
@@ -14,7 +15,7 @@ export default function UrbanHomeGrid({
     { id: "All", label: lang === "gu" ? "તમામ" : "All" },
     { id: "HNGU Exams", label: lang === "gu" ? "પરીક્ષા" : "Exams" },
     { id: "Admissions", label: lang === "gu" ? "પ્રવેશ" : "Admissions" },
-    { id: "Scholarships", label: lang === "gu" ? "સ્કોલરશિપ" : "Scholarships" },
+    { id: "Academic", label: lang === "gu" ? "શૈક્ષણિક" : "Academic" },
   ];
 
   const filteredNotices = notices.filter((n) => {
@@ -41,12 +42,14 @@ export default function UrbanHomeGrid({
 
             {/* Campus Image Preview */}
             <div className="rounded-lg overflow-hidden border border-slate-200 mb-3.5 shadow-sm relative h-36">
-              <img
+              <Image
                 src="/images/campus_front.jpg"
                 alt="Dr. Ashaben Patel Government Science College Campus"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover"
               />
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2 text-white text-[11px] font-semibold flex items-center justify-between">
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2 text-white text-[11px] font-semibold flex items-center justify-between z-10">
                 <span>MRS Highschool Campus, Unjha</span>
                 <span className="text-amber-300 font-mono">Code: {collegeInfo.hnguCode}</span>
               </div>

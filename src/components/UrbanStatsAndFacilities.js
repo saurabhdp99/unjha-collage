@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Icon } from "./Icons";
 import { facilities } from "@/data/collegeData";
 
@@ -42,18 +43,20 @@ export default function UrbanStatsAndFacilities({ lang }) {
               >
                 {/* Image Header with Badge */}
                 <div className="relative h-44 w-full overflow-hidden bg-slate-900">
-                  <img
+                  <Image
                     src={imgPath}
                     alt={fac.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
                   
-                  <div className="absolute top-3 left-3 p-2 rounded-lg bg-black/50 text-amber-300 backdrop-blur-sm border border-white/20">
+                  <div className="absolute top-3 left-3 p-2 rounded-lg bg-black/50 text-amber-300 backdrop-blur-sm border border-white/20 z-20">
                     <Icon name={fac.icon} className="w-5 h-5" />
                   </div>
 
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <div className="absolute bottom-3 left-3 right-3 text-white z-20">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300 block mb-0.5">
                       {fac.stats.split("|")[0]}
                     </span>

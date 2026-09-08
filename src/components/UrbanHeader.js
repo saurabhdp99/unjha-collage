@@ -44,7 +44,6 @@ export default function UrbanHeader({
       label: lang === "gu" ? "વિદ્યાર્થી કોર્નર" : "Student Corner",
       dropdown: [
         { id: "notice-section", label: lang === "gu" ? "ડિજિટલ નોટિસ બોર્ડ" : "Live Notice Board" },
-        { id: "scholarship-section", label: lang === "gu" ? "MYSY & ડિજિટલ ગુજરાત સ્કોલરશિપ" : "Scholarships (MYSY / Govt)" },
         { id: "departments", label: lang === "gu" ? "NEP ૨૦૨૦ સિલેબસ & ટાઈમટેબલ" : "NEP Syllabus & Timetable" },
         { id: "committees-section", label: lang === "gu" ? "રેગિંગ વિરોધી સેલ (Anti-Ragging)" : "Anti-Ragging Committee" },
         { id: "committees-section", label: lang === "gu" ? "મહિલા વિકાસ સેલ (CWDC)" : "Women Development Cell" },
@@ -52,7 +51,6 @@ export default function UrbanHeader({
     },
     { id: "notice-section", label: lang === "gu" ? "સર્ક્યુલર / નોટિસ" : "Notices", highlight: true },
     { id: "facilities-section", label: lang === "gu" ? "કેમ્પસ સુવિધાઓ" : "Campus & Facilities" },
-    { id: "scholarship-section", label: lang === "gu" ? "શિષ્યવૃત્તિ" : "Scholarships" },
     { id: "gallery-section", label: lang === "gu" ? "ગેલેરી" : "Gallery" },
     { id: "contact-section", label: lang === "gu" ? "સંપર્ક" : "Contact Us" },
   ];

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Icon } from "./Icons";
 import { administration, collegeInfo } from "@/data/collegeData";
 
@@ -25,11 +26,13 @@ export default function UrbanPrincipalDesk({ lang }) {
           <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-4 border-b border-slate-100 pb-4 mb-4">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-3 border-amber-500 shadow-md shrink-0">
-                  <img
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-3 border-amber-500 shadow-md shrink-0 relative">
+                  <Image
                     src="/images/principal.jpg"
                     alt={administration.principalName}
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    sizes="96px"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div>
@@ -60,11 +63,13 @@ export default function UrbanPrincipalDesk({ lang }) {
           <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-4 border-b border-slate-100 pb-4 mb-4">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-3 border-amber-500 shadow-md shrink-0">
-                  <img
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-3 border-amber-500 shadow-md shrink-0 relative">
+                  <Image
                     src="/images/president.jpg"
                     alt="Trust President"
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    sizes="96px"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div>

@@ -7,7 +7,6 @@ import UrbanHomeGrid from "@/components/UrbanHomeGrid";
 import UrbanDepartments from "@/components/UrbanDepartments";
 import UrbanPrincipalDesk from "@/components/UrbanPrincipalDesk";
 import UrbanStatsAndFacilities from "@/components/UrbanStatsAndFacilities";
-import ScholarshipSection from "@/components/ScholarshipSection";
 import UrbanGallery from "@/components/UrbanGallery";
 import FAQSection from "@/components/FAQSection";
 import UrbanFooter from "@/components/UrbanFooter";
@@ -33,7 +32,7 @@ export default function Home() {
 
       {/* MAIN BODY CONTENT */}
       <main className="flex-1 w-full">
-        {/* 2. HERO SLIDER BANNER WITH MARQUEE FLASH NEWS */}
+        {/* 2. CLEAN COLLEGE CAMPUS HERO BANNER */}
         <UrbanHeroSlider
           lang={lang}
           onNavigateSection={handleNavigateSection}
@@ -56,10 +55,7 @@ export default function Home() {
         {/* 6. CAMPUS FACILITIES & RESOURCES */}
         <UrbanStatsAndFacilities lang={lang} />
 
-        {/* 7. GUJARAT GOVT SCHOLARSHIPS (MYSY & DIGITAL GUJARAT) */}
-        <ScholarshipSection lang={lang} />
-
-        {/* 8. PHOTO & EVENT GALLERY */}
+        {/* 7. PHOTO & EVENT GALLERY */}
         <UrbanGallery lang={lang} />
 
         {/* 9. STUDENT & PARENT FAQ */}

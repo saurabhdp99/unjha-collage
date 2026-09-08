@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Icon } from "./Icons";
 
 export default function UrbanGallery({ lang }) {
@@ -98,12 +99,14 @@ export default function UrbanGallery({ lang }) {
             >
               {/* Photo Frame */}
               <div className="relative h-48 w-full overflow-hidden bg-slate-900">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 z-10"></div>
 
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
                   <span className="text-[10px] font-extrabold uppercase tracking-wider bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20 text-amber-300">

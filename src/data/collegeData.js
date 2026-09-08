@@ -37,12 +37,12 @@ export const collegeInfo = {
 export const marqueeAnnouncements = [
   "📢 HNGU Patan B.Sc. Sem-2, Sem-4, and Sem-6 Regular & ATKT Exam Forms 2025-26 are now open.",
   "🎓 Online Admission Registration for B.Sc. (Chemistry, Physics, Mathematics, Botany) Sem-1 has commenced.",
-  "💰 Digital Gujarat & MYSY Post-Matric Scholarship portal is active. Verify documents at College Office.",
+  "🔬 B.Sc. Semester Laboratory practicals and assignment submissions are active at MRS Campus.",
   "🏆 Dr. Ashaben Patel Government Science College excels at HNGU Inter-College Science Fair & Youth Festival.",
   "📚 BAOU Distance Education Study Centre (1502) term-end examination hall tickets available for download."
 ];
 
-export const noticeCategories = ["All", "HNGU Exams", "Admissions", "Scholarships", "Events & Science", "Circulars"];
+export const noticeCategories = ["All", "HNGU Exams", "Admissions", "Academic", "Events & Science", "Circulars"];
 
 export const notices = [
   {
@@ -67,12 +67,12 @@ export const notices = [
   },
   {
     id: "N-103",
-    title: "Mukhyamantri Yuva Swavalamban Yojana (MYSY) & Digital Gujarat Scholarship Circular",
-    category: "Scholarships",
+    title: "Academic Calendar & Departmental Internal Assessment Schedule (Summer 2026)",
+    category: "Academic",
     date: "2026-02-25",
     isUrgent: false,
     fileSize: "620 KB",
-    summary: "Instructions for eligible science students to verify income certificates and bank accounts at the college office.",
+    summary: "Guidelines for internal theory unit tests, laboratory practical records, and project submission deadlines.",
     downloadUrl: "#"
   },
   {
@@ -405,7 +405,7 @@ export const administration = {
     "Deliver accessible, high-quality pure and applied science education under NEP 2020 framework.",
     "Equip students with rigorous laboratory skills, experimental discipline, and analytical problem solving.",
     "Instill values of environmental ethics, scientific temper, and national service.",
-    "Promote inclusive higher education with maximum utilization of Gujarat Government scholarship schemes."
+    "Promote inclusive higher education, practical skills, and student empowerment in scientific disciplines under NEP 2020."
   ],
   iqacCoordinator: "Dr. S. K. Prajapati (Associate Professor in Chemistry)",
   naacCycle: "State Government Higher Education Quality Initiative (Affiliated Code: 879)",
@@ -454,8 +454,8 @@ export const faqList = [
   {
     q: "How do I apply for B.Sc. admission at Dr. Ashaben Patel Government Science College, Unjha?",
     qGu: "ડૉ. આશાબેન પટેલ સરકારી વિજ્ઞાન કોલેજ, ઊંઝામાં B.Sc. માં પ્રવેશ કેવી રીતે મેળવવો?",
-    a: "Admissions for B.Sc. (Chemistry, Physics, Mathematics, Botany) are conducted as per HNGU Patan centralized admission guidelines (GCAS portal). You can submit the online inquiry form on our website or visit our Admission Helpdesk at MRS Highschool Campus, Unjha with your 12th Science marksheet and school leaving certificate.",
-    aGu: "B.Sc. (રસાયણશાસ્ત્ર, ભૌતિકશાસ્ત્ર, ગણિત, બોટની) માં પ્રવેશ HNGU પાટણ અને સરકારી GCAS પોર્ટલ દ્વારા થાય છે. તમે અમારી વેબસાઇટ પર ઓનલાઇન ફોર્મ ભરી શકો છો અથવા રૂબરૂ એમ. આર. એસ. હાઇસ્કૂલ કેમ્પસ, ઊંઝા ખાતે પ્રવેશ હેલ્પડેસ્કનો સંપર્ક કરી શકો છો."
+    a: "Admissions for B.Sc. (Chemistry, Physics, Mathematics, Botany) are conducted as per HNGU Patan centralized admission guidelines (GCAS portal). You can submit the inquiry form on our website or visit our Admission Helpdesk at MRS Highschool Campus, Unjha with your 12th Science marksheet and school leaving certificate.",
+    aGu: "B.Sc. (રસાયણશાસ્ત્ર, ભૌતિકશાસ્ત્ર, ગણિત, બોટની) માં પ્રવેશ HNGU પાટણ અને સરકારી GCAS પોર્ટલ દ્વારા થાય છે. તમે રૂબરૂ એમ. આર. એસ. હાઇસ્કૂલ કેમ્પસ, ઊંઝા ખાતે પ્રવેશ હેલ્પડેસ્કનો સંપર્ક કરી શકો છો."
   },
   {
     q: "Is this college officially affiliated with HNGU Patan?",
@@ -476,9 +476,9 @@ export const faqList = [
     aGu: "તમે અમારી વેબસાઇટ પર 'HNGU Result Portal' ટૂલનો ઉપયોગ કરીને તમારો B.Sc. કોર્સ, સેમેસ્ટર અને સીટ નંબર દાખલ કરી માર્કશીટ જોઈ અને ડાઉનલોડ કરી શકો છો."
   },
   {
-    q: "What scholarships and government fee benefits are available?",
-    qGu: "વિદ્યાર્થીઓ માટે કઈ સ્કોલરશિપ અને સરકારી ફી સહાય ઉપલબ્ધ છે?",
-    a: "Students are eligible for Gujarat Government schemes including MYSY (Mukhyamantri Yuva Swavalamban Yojana), Digital Gujarat Post-Matric Scholarship for SC/ST/SEBC/EWS, Kanya Kelavani Nidhi 100% tuition waiver for girl students, and Free-Ship cards.",
-    aGu: "વિદ્યાર્થીઓને ગુજરાત સરકારની MYSY, ડિજિટલ ગુજરાત શિષ્યવૃત્તિ (SC/ST/SEBC/EWS), વિદ્યાર્થિનીઓ માટે ૧૦૦% ટ્યુશન ફી માફી (કન્યા કેળવણી નિધિ) અને ફ્રી-શિપ કાર્ડ યોજનાનો સંપૂર્ણ લાભ મળે છે."
+    q: "What laboratory and library facilities are available for students?",
+    qGu: "વિદ્યાર્થીઓ માટે કઈ લેબોરેટરી અને પુસ્તકાલય સુવિધાઓ ઉપલબ્ધ છે?",
+    a: "The college houses well-equipped laboratories for Chemistry, Physics, Botany, and Computer Science, along with an extensive science library containing textbook sets, research journals, and INFLIBNET N-LIST digital access.",
+    aGu: "કોલેજમાં રસાયણશાસ્ત્ર, ભૌતિકશાસ્ત્ર, વનસ્પતિશાસ્ત્ર અને કમ્પ્યુટર વિજ્ઞાનની અદ્યતન પ્રયોગશાળાઓ તેમજ સંદર્ભ પુસ્તકો, જર્નલ્સ અને INFLIBNET N-LIST ડિજિટલ સુવિધા ધરાવતું સમૃદ્ધ પુસ્તકાલય ઉપલબ્ધ છે."
   }
 ];
