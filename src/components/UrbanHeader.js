@@ -36,7 +36,6 @@ export default function UrbanHeader({
         { id: "departments", label: "Department of Physics (B.Sc.)" },
         { id: "departments", label: "Department of Mathematics (B.Sc.)" },
         { id: "departments", label: "Department of Botany (B.Sc.)" },
-        { id: "departments", label: "BAOU Open Learning Centre (1502)" },
       ],
     },
     {

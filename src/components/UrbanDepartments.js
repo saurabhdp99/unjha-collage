@@ -10,13 +10,15 @@ export default function UrbanDepartments({ lang }) {
 
   const streamFilters = [
     { id: "All", label: lang === "gu" ? "તમામ વિજ્ઞાન વિભાગો" : "All Science Depts" },
-    { id: "Science", label: lang === "gu" ? "વિજ્ઞાન શાખા (B.Sc. Programs)" : "B.Sc. Science Programs" },
-    { id: "Open Learning", label: lang === "gu" ? "BAOU મુક્ત શિક્ષણ કેન્દ્ર" : "BAOU Open Centre" },
+    { id: "bsc-chem", label: lang === "gu" ? "રસાયણશાસ્ત્ર (Chemistry)" : "Chemistry" },
+    { id: "bsc-phy", label: lang === "gu" ? "ભૌતિકશાસ્ત્ર (Physics)" : "Physics" },
+    { id: "bsc-math", label: lang === "gu" ? "ગણિતશાસ્ત્ર (Mathematics)" : "Mathematics" },
+    { id: "bsc-bot", label: lang === "gu" ? "વનસ્પતિશાસ્ત્ર (Botany)" : "Botany" },
   ];
 
   const filteredPrograms = academicPrograms.filter((p) => {
     if (activeStream === "All") return true;
-    return p.stream === activeStream;
+    return p.id === activeStream;
   });
 
   return (

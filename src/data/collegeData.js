@@ -38,8 +38,7 @@ export const marqueeAnnouncements = [
   "📢 HNGU Patan B.Sc. Sem-2, Sem-4, and Sem-6 Regular & ATKT Exam Forms 2025-26 are now open.",
   "🎓 Online Admission Registration for B.Sc. (Chemistry, Physics, Mathematics, Botany) Sem-1 has commenced.",
   "🔬 B.Sc. Semester Laboratory practicals and assignment submissions are active at MRS Campus.",
-  "🏆 Dr. Ashaben Patel Government Science College excels at HNGU Inter-College Science Fair & Youth Festival.",
-  "📚 BAOU Distance Education Study Centre (1502) term-end examination hall tickets available for download."
+  "🏆 Dr. Ashaben Patel Government Science College excels at HNGU Inter-College Science Fair & Youth Festival."
 ];
 
 export const noticeCategories = ["All", "HNGU Exams", "Admissions", "Academic", "Events & Science", "Circulars"];
@@ -210,29 +209,6 @@ export const academicPrograms = [
       "Campus Botanical Garden & Regional Herbarium preserving North Gujarat arid flora",
       "High-resolution binocular compound microscopes and microtomes",
       "Regular botanical exploration field trips to Mount Abu, Taranga & Jessore sanctuaries"
-    ]
-  },
-  {
-    id: "baou",
-    level: "Distance",
-    stream: "Open Learning",
-    name: "Dr. Babasaheb Ambedkar Open University (BAOU) Centre",
-    duration: "Flexible Certificate, Diploma & Degree",
-    intake: "Open",
-    eligibility: "10th / 12th / Any Degree (as per program guidelines)",
-    hnguAffiliation: "Recognized BAOU Study Centre (Code: 1502)",
-    medium: "Gujarati & English",
-    subjects: [
-      "B.Sc. / B.A. / B.Com. Distance Programs",
-      "CCC & Advanced Computer Concept Certificates",
-      "Diploma in Journalism & Environmental Science",
-      "Certificate in Food & Nutrition / Panchayati Raj",
-      "Special Women Empowerment & Vocational Skill Courses"
-    ],
-    highlights: [
-      "Weekend Sunday counseling sessions for working youth and rural students",
-      "Subsidized government study modules and digital e-learning access",
-      "Convenient examination center at MRS Highschool Campus, Unjha"
     ]
   }
 ];

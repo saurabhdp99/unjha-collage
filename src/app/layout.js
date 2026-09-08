@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Dr. Ashaben Patel Government Science College, Unjha | HNGU Patan Affiliated",
-  description: "Official web portal of Dr. Ashaben Patel Government Science College, Unjha, Dist. Mehsana, Gujarat. MRS Highschool Campus. Affiliated with Hemchandracharya North Gujarat University (HNGU), Patan (College Code: 879, AISHE: C-64881). Offers B.Sc. (Chemistry, Physics, Mathematics, Botany), BAOU study centre, online HNGU results, and digital circulars.",
+  description: "Official web portal of Dr. Ashaben Patel Government Science College, Unjha, Dist. Mehsana, Gujarat. MRS Highschool Campus. Affiliated with Hemchandracharya North Gujarat University (HNGU), Patan (College Code: 879, AISHE: C-64881). Offers B.Sc. (Chemistry, Physics, Mathematics, Botany), online HNGU results, and digital circulars.",
   keywords: [
     "Dr. Ashaben Patel Government Science College",
     "Government Science College Unjha",
