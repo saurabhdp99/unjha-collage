@@ -20,12 +20,12 @@ export default function UrbanStatsAndFacilities() {
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 border-b-2 border-slate-200 pb-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 border-b-2 border-[#0a2540] pb-4">
           <div>
-            <div className="text-xs font-extrabold uppercase tracking-wider text-sky-700 mb-1">
+            <div className="text-xs font-extrabold uppercase tracking-wider text-[#d97706] mb-1">
               Campus Infrastructure & Learning Resources
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0a192f] tracking-tight">
               State-of-the-Art Student Facilities
             </h2>
           </div>
@@ -39,10 +39,10 @@ export default function UrbanStatsAndFacilities() {
             return (
               <div
                 key={fac.id}
-                className="bg-white rounded-xl border border-slate-200/80 hover:border-sky-400 transition-all flex flex-col justify-between overflow-hidden group"
+                className="bg-white rounded-xl border border-slate-200/80 hover:border-[#d97706] shadow-sm transition-all flex flex-col justify-between overflow-hidden group"
               >
                 {/* Image Header with Badge */}
-                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-44 w-full overflow-hidden bg-[#071a2e]">
                   <Image
                     src={imgPath}
                     alt={fac.title}
@@ -50,14 +50,14 @@ export default function UrbanStatsAndFacilities() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071a2e]/95 via-[#071a2e]/40 to-transparent z-10"></div>
                   
-                  <div className="absolute top-3 left-3 p-2 rounded-lg bg-slate-900/70 text-sky-300 backdrop-blur-sm border border-sky-400/30 z-20">
-                    <Icon name={fac.icon} className="w-5 h-5" />
+                  <div className="absolute top-3 left-3 p-2 rounded-lg bg-[#071a2e]/80 text-[#fde68a] backdrop-blur-sm border border-[#d97706]/40 z-20 shadow-sm">
+                    <Icon name={fac.icon} className="w-5 h-5 text-[#d97706]" />
                   </div>
 
                   <div className="absolute bottom-3 left-3 right-3 text-white z-20">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-sky-300 block mb-0.5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#fde68a] block mb-0.5">
                       {fac.stats.split("|")[0]}
                     </span>
                     <h3 className="text-base font-black text-white leading-tight">
@@ -68,13 +68,13 @@ export default function UrbanStatsAndFacilities() {
 
                 {/* Card Body */}
                 <div className="p-4 flex-1 flex flex-col justify-between">
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-xs text-[#53657d] leading-relaxed mb-4 line-clamp-3">
                     {fac.description}
                   </p>
 
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500">
-                    <span className="text-emerald-700 font-bold truncate">{fac.stats.split("|")[1] || "All Students"}</span>
-                    <span className="text-sky-700 font-bold group-hover:underline">Explore →</span>
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-[#53657d]">
+                    <span className="text-[#0a2540] font-bold truncate">{fac.stats.split("|")[1] || "All Students"}</span>
+                    <span className="text-[#0a2540] group-hover:text-[#d97706] font-bold group-hover:underline transition-colors">Explore →</span>
                   </div>
                 </div>
               </div>

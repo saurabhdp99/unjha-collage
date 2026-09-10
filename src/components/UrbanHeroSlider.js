@@ -42,7 +42,7 @@ export default function UrbanHeroSlider() {
   };
 
   return (
-    <section className="w-full font-sans bg-slate-950 relative group">
+    <section className="w-full font-sans bg-[#071a2e] relative group">
       {/* PURE IMAGE SLIDER (CLEAN VIEW - NO TEXT OVERLAYS) */}
       <div className="relative w-full h-[340px] sm:h-[440px] md:h-[500px] lg:h-[560px] overflow-hidden select-none">
         {slides.map((slide, index) => (
@@ -68,7 +68,7 @@ export default function UrbanHeroSlider() {
         {/* Previous Button */}
         <button
           onClick={prevSlide}
-          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-2.5 sm:p-3 rounded-full bg-black/40 hover:bg-black/75 text-white transition-all backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 focus:opacity-100"
+          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-2.5 sm:p-3 rounded-full bg-[#071a2e]/60 hover:bg-[#071a2e]/90 text-white hover:text-[#fde68a] hover:border-[#d97706]/60 transition-all backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 focus:opacity-100"
           aria-label="Previous Slide"
         >
           <Icon name="ChevronDown" className="w-5 h-5 rotate-90" />
@@ -77,21 +77,21 @@ export default function UrbanHeroSlider() {
         {/* Next Button */}
         <button
           onClick={nextSlide}
-          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2.5 sm:p-3 rounded-full bg-black/40 hover:bg-black/75 text-white transition-all backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 focus:opacity-100"
+          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2.5 sm:p-3 rounded-full bg-[#071a2e]/60 hover:bg-[#071a2e]/90 text-white hover:text-[#fde68a] hover:border-[#d97706]/60 transition-all backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 focus:opacity-100"
           aria-label="Next Slide"
         >
           <Icon name="ChevronDown" className="w-5 h-5 -rotate-90" />
         </button>
 
         {/* Dot Indicators */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-[#071a2e]/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 idx === currentSlide
-                  ? "w-8 bg-sky-400"
+                  ? "w-8 bg-[#d97706] shadow-sm"
                   : "w-2.5 bg-white/60 hover:bg-white"
               }`}
               aria-label={`Go to slide ${idx + 1}`}

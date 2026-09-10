@@ -59,15 +59,15 @@ export default function UrbanGallery() {
   );
 
   return (
-    <section id="gallery-section" className="py-14 bg-[#f8fbff] border-b border-slate-200/80 font-sans">
+    <section id="gallery-section" className="py-14 bg-[#f8fafc] border-b border-slate-200/80 font-sans">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 border-b-2 border-slate-200 pb-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 border-b-2 border-[#0a2540] pb-4">
           <div>
-            <div className="text-xs font-extrabold uppercase tracking-wider text-sky-700 mb-1">
+            <div className="text-xs font-extrabold uppercase tracking-wider text-[#d97706] mb-1">
               Campus Memories & Photo Gallery
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0a192f] tracking-tight">
               Events & Cultural Glimpses
             </h2>
           </div>
@@ -78,10 +78,10 @@ export default function UrbanGallery() {
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                   activeFilter === cat
-                    ? "bg-sky-600 text-white"
-                    : "bg-white text-slate-700 border border-slate-200 hover:bg-sky-50 hover:text-sky-700"
+                    ? "bg-[#0a2540] text-white shadow-sm"
+                    : "bg-white text-[#53657d] border border-slate-200 hover:bg-[#f4f7fb] hover:text-[#0a2540]"
                 }`}
               >
                 {cat}
@@ -95,10 +95,10 @@ export default function UrbanGallery() {
           {filteredItems.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200/80 hover:border-sky-400 overflow-hidden transition-all group"
+              className="bg-white rounded-xl border border-slate-200/80 hover:border-[#d97706] shadow-sm overflow-hidden transition-all group"
             >
               {/* Photo Frame */}
-              <div className="relative h-48 w-full overflow-hidden bg-slate-900">
+              <div className="relative h-48 w-full overflow-hidden bg-[#071a2e]">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -106,13 +106,13 @@ export default function UrbanGallery() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071a2e]/95 via-black/20 to-transparent z-10"></div>
 
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20 text-sky-300">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider bg-[#071a2e]/80 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-[#d97706]/40 text-[#fde68a]">
                     {item.category}
                   </span>
-                  <span className="text-xs font-bold font-mono text-white bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
+                  <span className="text-xs font-bold font-mono text-white bg-[#071a2e]/60 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">
                     {item.date}
                   </span>
                 </div>
@@ -125,9 +125,9 @@ export default function UrbanGallery() {
               </div>
 
               {/* Card Footer */}
-              <div className="p-3 bg-white flex items-center justify-between text-xs text-slate-500 font-semibold">
+              <div className="p-3 bg-white flex items-center justify-between text-xs text-[#53657d] font-semibold">
                 <span>MRS Highschool Campus, Unjha</span>
-                <span className="text-sky-700 font-bold group-hover:underline">View Photo →</span>
+                <span className="text-[#0a2540] font-bold group-hover:text-[#d97706] group-hover:underline transition-colors">View Photo →</span>
               </div>
             </div>
           ))}

@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fbff] font-sans selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#f8fafc] font-sans selection:bg-[#0a2540] selection:text-[#fef3c7]">
       {/* 1. MEHSANA URBAN STYLE HEADER WITH STATUTORY BAR & LIGHT BLUE NAVBAR */}
       <UrbanHeader
         onNavigateSection={handleNavigateSection}
