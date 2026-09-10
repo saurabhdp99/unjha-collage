@@ -8,13 +8,6 @@ export default function UrbanDepartments() {
   const [activeStream, setActiveStream] = useState("All");
   const [selectedCourseForModal, setSelectedCourseForModal] = useState(null);
 
-  const streamFilters = [
-    { id: "All", label: "All Science Depts" },
-    { id: "bsc-chem", label: "Chemistry" },
-    { id: "bsc-phy", label: "Physics" },
-    { id: "bsc-math", label: "Mathematics" },
-    { id: "bsc-bot", label: "Botany" },
-  ];
 
   const filteredPrograms = academicPrograms.filter((p) => {
     if (activeStream === "All") return true;
@@ -33,23 +26,6 @@ export default function UrbanDepartments() {
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               Programs of Study & NEP 2020 Structure
             </h2>
-          </div>
-
-          {/* Stream Filter Pills */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-            {streamFilters.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveStream(tab.id)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
-                  activeStream === tab.id
-                    ? "bg-sky-600 text-white"
-                    : "bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-sky-700"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
           </div>
         </div>
 
