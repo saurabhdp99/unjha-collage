@@ -327,6 +327,85 @@ export const heroSlides = [
   { src: "/images/youth_festival.jpg", caption: "Youth Festival & NSS Activities" },
 ];
 
+// ---- Added after HNGU/Mehsana competitor review (MASC Mehsana, MNC Visnagar,
+// Govt. Science College Ahmedabad/Vadnagar). Dummy data in same simple pattern
+// as existing data, Mehsana/HNGU specific. Replace with office records. ----
+
+export const facultyList = [
+  { name: "Dr. K. M. Joshi", designation: "Principal", department: "Chemistry", qualification: "M.Sc., Ph.D.", experience: "22 years" },
+  { name: "Dr. S. K. Prajapati", designation: "Associate Professor & HoD", department: "Chemistry", qualification: "M.Sc., Ph.D.", experience: "15 years" },
+  { name: "Shri R. B. Chaudhari", designation: "Assistant Professor", department: "Chemistry", qualification: "M.Sc., GSET", experience: "8 years" },
+  { name: "Dr. M. D. Patel", designation: "Associate Professor & HoD", department: "Physics", qualification: "M.Sc., Ph.D.", experience: "14 years" },
+  { name: "Shri J. V. Desai", designation: "Assistant Professor", department: "Physics", qualification: "M.Sc., GSET", experience: "7 years" },
+  { name: "Dr. A. N. Thakor", designation: "Associate Professor & HoD", department: "Mathematics", qualification: "M.Sc., Ph.D.", experience: "13 years" },
+  { name: "Smt. K. R. Raval", designation: "Assistant Professor", department: "Mathematics", qualification: "M.Sc., B.Ed.", experience: "6 years" },
+  { name: "Dr. P. S. Mali", designation: "Associate Professor & HoD", department: "Botany", qualification: "M.Sc., Ph.D.", experience: "12 years" },
+  { name: "Shri H. G. Rabari", designation: "Assistant Professor", department: "Botany", qualification: "M.Sc., GSET", experience: "5 years" },
+  { name: "Shri N. K. Solanki", designation: "Librarian", department: "Library", qualification: "M.Lib.I.Sc.", experience: "10 years" },
+  { name: "Shri D. R. Makwana", designation: "Physical Instructor", department: "Sports", qualification: "M.P.Ed.", experience: "9 years" },
+  { name: "Shri B. J. Vaghela", designation: "Head Clerk", department: "Office", qualification: "B.Com.", experience: "18 years" },
+];
+
+export const committees = [
+  { name: "IQAC", coordinator: "Dr. S. K. Prajapati", members: "Principal, all HoDs, librarian, office superintendent" },
+  { name: "Anti-Ragging Committee", coordinator: "Dr. M. D. Patel", members: "All HoDs, NSS officer, student representatives, police contact: 100" },
+  { name: "Women Development / CWDC Cell", coordinator: "Smt. K. R. Raval", members: "Lady faculty, girl student representatives" },
+  { name: "Grievance Redressal Cell", coordinator: "Dr. A. N. Thakor", members: "Principal, office head, student council member" },
+  { name: "SC/ST/OBC & Scholarship Cell", coordinator: "Shri H. G. Rabari", members: "Office clerk, Nodal officer - Digital Gujarat" },
+  { name: "NSS & Extension Activities", coordinator: "Shri J. V. Desai", members: "100+ volunteers, Unjha taluka villages" },
+  { name: "Examination & Timetable", coordinator: "Dr. P. S. Mali", members: "All departments, HNGU exam section" },
+];
+
+export const studentCornerLinks = [
+  { title: "GCAS Admission Portal (Govt. of Gujarat)", desc: "Centralized B.Sc. admission application", url: "https://gcas.gujgov.edu.in", tag: "Admission" },
+  { title: "HNGU Syllabus", desc: "B.Sc. NEP syllabus - Chemistry, Physics, Maths, Botany", url: "https://ngu.ac.in/Syllabus.aspx", tag: "Syllabus" },
+  { title: "HNGU Results", desc: "Sem 1-6 university exam results", url: "https://erp.ngu.ac.in/erp/Form_Student_Web_Result.aspx", tag: "Results" },
+  { title: "HNGU Academic Calendar", desc: "Term dates, exam schedule", url: "https://ngu.ac.in/Academic-Calender.aspx", tag: "Calendar" },
+  { title: "Digital Gujarat Scholarship", desc: "MYSY, CMSS, Freeship, SC/ST/OBC schemes", url: "https://www.digitalgujarat.gov.in", tag: "Scholarship" },
+  { title: "Anti-Ragging Undertaking", desc: "Mandatory online affidavit every year", url: "https://www.antiragging.in", tag: "Mandatory" },
+];
+
+export const scholarships = [
+  { name: "Mukhyamantri Yuva Swavalamban Yojana (MYSY)", for: "80%+ in 12th Science, income limit as per norms" },
+  { name: "CM Scholarship Scheme (CMSS)", for: "Govt. college students, tuition fee support" },
+  { name: "SC/ST/OBC/SEBC Freeship", for: "Digital Gujarat portal, caste + income certificate" },
+  { name: "National Scholarship Portal (NSP)", for: "Merit-cum-means & central schemes" },
+];
+
+export const downloads = [
+  { title: "B.Sc. Admission Form (office copy)", size: "210 KB" },
+  { title: "Bonafide / Leaving Certificate Format", size: "120 KB" },
+  { title: "Practical Journal Certification Format", size: "95 KB" },
+  { title: "Bus Pass Concession Form (GSRTC)", size: "150 KB" },
+  { title: "Anti-Ragging Affidavit Format", size: "110 KB" },
+];
+
+export const achievements = [
+  { title: "HNGU Youth Festival - Science Rangoli 1st Prize", year: "2025", who: "B.Sc. Chemistry team" },
+  { title: "University Exam - 98.2% pass, 12 first-class with distinction", year: "2025", who: "Sem-6 all departments" },
+  { title: "NSS Best Volunteer - HNGU level", year: "2024", who: "NSS unit, Unjha taluka camp" },
+  { title: "Inter-college Volleyball - Runners up", year: "2024", who: "MRS ground sports team" },
+];
+
+export const admissionInfo = {
+  portal: "GCAS (Gujarat Common Admission Services) + HNGU counselling",
+  portalUrl: "https://gcas.gujgov.edu.in",
+  steps: [
+    "Fill GCAS online form and select Dr. APGSC Unjha (HNGU Code 879).",
+    "Check merit list on notice board / notices page and attend counselling at MRS Campus.",
+    "Verify 12th marksheet, school leaving certificate, caste/income certificate if applicable.",
+    "Pay govt. fees at office and collect timetable + practical batch.",
+  ],
+  documents: [
+    "12th Science marksheet (original + 2 xerox)",
+    "School leaving certificate",
+    "Caste / income / domicile certificate (for scholarship)",
+    "Aadhaar card + 2 passport photos",
+    "GCAS application print + merit allotment letter",
+  ],
+  feesNote: "Government college fees as per Education Department norms. Exact Sem-1 fee slip is issued at counselling. Scholarships via Digital Gujarat.",
+};
+
 export const faqList = [
   {
     q: "How do I apply for B.Sc. admission at Dr. Ashaben Patel Government Science College, Unjha?",

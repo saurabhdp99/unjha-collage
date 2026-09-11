@@ -9,9 +9,13 @@ import { collegeInfo } from "@/data/collegeData";
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
+  { href: "/admission", label: "Admission" },
   { href: "/departments", label: "Departments" },
+  { href: "/faculty", label: "Faculty" },
   { href: "/notices", label: "Notices" },
+  { href: "/student-corner", label: "Student Corner" },
   { href: "/facilities", label: "Facilities" },
+  { href: "/iqac", label: "IQAC" },
   { href: "/leadership", label: "Principal's Desk" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact Us" },
@@ -66,7 +70,7 @@ export default function UrbanHeader() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:block bg-[#1e3a5f]" aria-label="Primary">
-          <div className="container-shell flex items-center">
+          <div className="container-shell flex items-center flex-wrap">
             {NAV.map((n) => {
               const active = pathname === n.href;
               return (

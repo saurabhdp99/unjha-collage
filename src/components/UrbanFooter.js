@@ -5,10 +5,17 @@ import Link from "next/link";
 import { Icon } from "./Icons";
 import { collegeInfo } from "@/data/collegeData";
 
+const USEFUL = [
+  { label: "HNGU Patan", href: "https://ngu.ac.in" },
+  { label: "GCAS Admission", href: "https://gcas.gujgov.edu.in" },
+  { label: "Digital Gujarat", href: "https://www.digitalgujarat.gov.in" },
+  { label: "UGC", href: "https://www.ugc.gov.in" },
+];
+
 export default function UrbanFooter() {
   return (
     <footer className="bg-[#152a45] text-slate-300">
-      <div className="container-shell py-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container-shell py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <h4 className="text-white font-bold text-sm mb-3">{collegeInfo.name}</h4>
           <p className="text-[13px] leading-relaxed">
@@ -23,11 +30,26 @@ export default function UrbanFooter() {
           <h4 className="text-white font-bold text-sm mb-3">Quick Links</h4>
           <ul className="grid gap-1.5 text-[13px]">
             <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+            <li><Link href="/admission" className="hover:text-white">Admission</Link></li>
             <li><Link href="/departments" className="hover:text-white">Departments</Link></li>
+            <li><Link href="/faculty" className="hover:text-white">Faculty</Link></li>
             <li><Link href="/notices" className="hover:text-white">Notices</Link></li>
-            <li><Link href="/facilities" className="hover:text-white">Facilities</Link></li>
-            <li><Link href="/gallery" className="hover:text-white">Gallery</Link></li>
+            <li><Link href="/student-corner" className="hover:text-white">Student Corner</Link></li>
+            <li><Link href="/iqac" className="hover:text-white">IQAC & Committees</Link></li>
             <li><Link href="/contact" className="hover:text-white">Contact Us</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-white font-bold text-sm mb-3">Useful Links</h4>
+          <ul className="grid gap-1.5 text-[13px]">
+            {USEFUL.map((u) => (
+              <li key={u.label}>
+                <a href={u.href} target="_blank" rel="noreferrer" className="hover:text-white">
+                  {u.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
