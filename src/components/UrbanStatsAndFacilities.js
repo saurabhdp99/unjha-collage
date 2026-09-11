@@ -1,87 +1,54 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "./Icons";
-import { facilities } from "@/data/collegeData";
+import { facilities, collegeInfo } from "@/data/collegeData";
 
 export default function UrbanStatsAndFacilities() {
-  const facilityImages = {
-    library: "/images/library.jpg",
-    "computer-lab": "/images/lab.jpg",
-    "sports-gym": "/images/sports.jpg",
-    "nss-ncc": "/images/youth_festival.jpg",
-    auditorium: "/images/convocation.jpg",
-    hostel: "/images/campus_front.jpg",
-  };
-
   return (
-    <section id="facilities-section" className="py-14 bg-white border-b border-slate-200/80 font-sans">
-      <div className="max-w-7xl mx-auto px-4">
-
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 border-b-2 border-[#0a2540] pb-4">
-          <div>
-            <div className="text-xs font-extrabold uppercase tracking-wider text-[#d97706] mb-1">
-              Campus Infrastructure & Learning Resources
+    <>
+      {/* Simple stats */}
+      <section className="bg-[#1e3a5f] text-white">
+        <div className="container-shell py-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {collegeInfo.stats.map((s) => (
+            <div key={s.label} className="text-center border border-white/15 rounded-lg py-3 px-2">
+              <Icon name={s.icon} className="w-5 h-5 mx-auto text-amber-300" />
+              <p className="font-bold text-lg mt-1">{s.value}</p>
+              <p className="text-[11px] text-slate-300 leading-snug">{s.label}</p>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#0a192f] tracking-tight">
-              State-of-the-Art Student Facilities
-            </h2>
-          </div>
+          ))}
         </div>
+      </section>
 
-        {/* Facilities 6-Card Grid with REAL PHOTO THUMBNAILS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {facilities.map((fac) => {
-            const imgPath = facilityImages[fac.id] || "/images/campus_front.jpg";
+      <section className="section-pad bg-white border-b border-slate-200">
+        <div className="container-shell">
+          <div className="flex items-end justify-between gap-3 mb-4">
+            <div>
+              <h2 className="section-title">Facilities</h2>
+              <p className="section-sub">Labs, library, sports & NSS at MRS Campus</p>
+            </div>
+            <Link href="/facilities" className="text-[13px] font-semibold text-[#1e3a5f] underline underline-offset-4 shrink-0">
+              View All
+            </Link>
+          </div>
 
-            return (
-              <div
-                key={fac.id}
-                className="bg-white rounded-xl border border-slate-200/80 hover:border-[#d97706] shadow-sm transition-all flex flex-col justify-between overflow-hidden group"
-              >
-                {/* Image Header with Badge */}
-                <div className="relative h-44 w-full overflow-hidden bg-[#071a2e]">
-                  <Image
-                    src={imgPath}
-                    alt={fac.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071a2e]/95 via-[#071a2e]/40 to-transparent z-10"></div>
-                  
-                  <div className="absolute top-3 left-3 p-2 rounded-lg bg-[#071a2e]/80 text-[#fde68a] backdrop-blur-sm border border-[#d97706]/40 z-20 shadow-sm">
-                    <Icon name={fac.icon} className="w-5 h-5 text-[#d97706]" />
-                  </div>
-
-                  <div className="absolute bottom-3 left-3 right-3 text-white z-20">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#fde68a] block mb-0.5">
-                      {fac.stats.split("|")[0]}
-                    </span>
-                    <h3 className="text-base font-black text-white leading-tight">
-                      {fac.title}
-                    </h3>
-                  </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {facilities.slice(0, 3).map((f) => (
+              <div key={f.id} className="card overflow-hidden">
+                <div className="relative h-40">
+                  <Image src={f.image} alt={f.title} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" />
                 </div>
-
-                {/* Card Body */}
-                <div className="p-4 flex-1 flex flex-col justify-between">
-                  <p className="text-xs text-[#53657d] leading-relaxed mb-4 line-clamp-3">
-                    {fac.description}
-                  </p>
-
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-[#53657d]">
-                    <span className="text-[#0a2540] font-bold truncate">{fac.stats.split("|")[1] || "All Students"}</span>
-                    <span className="text-[#0a2540] group-hover:text-[#d97706] font-bold group-hover:underline transition-colors">Explore →</span>
-                  </div>
+                <div className="p-4">
+                  <h3 className="font-bold text-[15px] leading-snug">{f.title}</h3>
+                  <p className="text-[13px] text-slate-600 mt-1 line-clamp-3">{f.description}</p>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

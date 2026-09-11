@@ -274,6 +274,59 @@ export const administration = {
   ]
 };
 
+export const galleryItems = [
+  {
+    title: "College Campus Front (MRS Highschool Campus)",
+    category: "Campus",
+    date: "Oct 2024",
+    image: "/images/campus_front.jpg",
+  },
+  {
+    title: "Campus Building & Ground",
+    category: "Campus",
+    date: "Oct 2024",
+    image: "/images/campus.jpg",
+  },
+  {
+    title: "Annual Convocation Ceremony",
+    category: "Events",
+    date: "Jan 2025",
+    image: "/images/convocation.jpg",
+  },
+  {
+    title: "Science Laboratory Practical",
+    category: "Labs",
+    date: "Nov 2024",
+    image: "/images/lab.jpg",
+  },
+  {
+    title: "Central Library & Study Hall",
+    category: "Campus",
+    date: "Nov 2024",
+    image: "/images/library.jpg",
+  },
+  {
+    title: "Sports Day at MRS Ground",
+    category: "Sports",
+    date: "Dec 2024",
+    image: "/images/sports.jpg",
+  },
+  {
+    title: "Youth Festival Participation",
+    category: "Events",
+    date: "Feb 2025",
+    image: "/images/youth_festival.jpg",
+  },
+];
+
+export const heroSlides = [
+  { src: "/images/campus_front.jpg", caption: "Dr. Ashaben Patel Government Science College, Unjha — MRS Campus" },
+  { src: "/images/campus.jpg", caption: "MRS Highschool Campus, Unjha — College Building & Ground" },
+  { src: "/images/lab.jpg", caption: "Science Laboratories — Chemistry, Physics, Botany Practical" },
+  { src: "/images/library.jpg", caption: "Central Library & Study Hall" },
+  { src: "/images/youth_festival.jpg", caption: "Youth Festival & NSS Activities" },
+];
+
 export const faqList = [
   {
     q: "How do I apply for B.Sc. admission at Dr. Ashaben Patel Government Science College, Unjha?",

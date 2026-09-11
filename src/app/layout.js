@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,27 +11,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const serif = Fraunces({
+  variable: "--font-serif-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
 export const metadata = {
-  title: "Dr. Ashaben Patel Government Science College, Unjha | HNGU Patan Affiliated",
-  description: "Official web portal of Dr. Ashaben Patel Government Science College, Unjha, Dist. Mehsana, Gujarat. MRS Highschool Campus. Affiliated with Hemchandracharya North Gujarat University (HNGU), Patan (College Code: 879, AISHE: C-64881). Offers B.Sc. (Chemistry, Physics, Mathematics, Botany), online HNGU results, and digital circulars.",
+  title: {
+    default: "Dr. Ashaben Patel Govt. Science College, Unjha | B.Sc. Admissions, HNGU Patan",
+    template: "%s | APGSC Unjha",
+  },
+  description:
+    "Government Science College at MRS Campus, Unjha (Mehsana). B.Sc. in Chemistry, Physics, Maths & Botany affiliated to HNGU Patan (Code 879). Notices, admissions, labs, library, NSS & results.",
   keywords: [
     "Dr. Ashaben Patel Government Science College",
     "Government Science College Unjha",
-    "APGSC Unjha",
-    "Unjha Science College",
     "HNGU College Code 879",
-    "AISHE C-64881",
-    "MRS Highschool Campus Unjha",
-    "Science College Mehsana",
+    "B.Sc. Admission Unjha",
     "HNGU Patan Results",
-    "B.Sc. Chemistry Unjha",
-    "B.Sc. Physics Unjha",
-    "B.Sc. Mathematics Unjha",
-    "B.Sc. Botany Unjha",
-    "Government College Gujarat"
   ],
-  authors: [{ name: "Dr. Ashaben Patel Government Science College Administration" }],
-  viewport: "width=device-width, initial-scale=1",
+  authors: [{ name: "APGSC Unjha" }],
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#0a2540",
 };
 
@@ -39,9 +44,15 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${geistSans.variable} ${geistMono.variable} ${serif.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-[#f8fafc] text-[#0a192f] selection:bg-[#0a2540] selection:text-[#fef3c7]">
+      <body className="min-h-full flex flex-col bg-[#f6f8fb] text-[#0b1b2e]">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-bold"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>
