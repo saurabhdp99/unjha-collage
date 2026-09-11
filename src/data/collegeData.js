@@ -332,18 +332,18 @@ export const heroSlides = [
 // as existing data, Mehsana/HNGU specific. Replace with office records. ----
 
 export const facultyList = [
-  { name: "Dr. K. M. Joshi", designation: "Principal", department: "Chemistry", qualification: "M.Sc., Ph.D.", experience: "22 years" },
-  { name: "Dr. S. K. Prajapati", designation: "Associate Professor & HoD", department: "Chemistry", qualification: "M.Sc., Ph.D.", experience: "15 years" },
-  { name: "Shri R. B. Chaudhari", designation: "Assistant Professor", department: "Chemistry", qualification: "M.Sc., GSET", experience: "8 years" },
-  { name: "Dr. M. D. Patel", designation: "Associate Professor & HoD", department: "Physics", qualification: "M.Sc., Ph.D.", experience: "14 years" },
-  { name: "Shri J. V. Desai", designation: "Assistant Professor", department: "Physics", qualification: "M.Sc., GSET", experience: "7 years" },
-  { name: "Dr. A. N. Thakor", designation: "Associate Professor & HoD", department: "Mathematics", qualification: "M.Sc., Ph.D.", experience: "13 years" },
-  { name: "Smt. K. R. Raval", designation: "Assistant Professor", department: "Mathematics", qualification: "M.Sc., B.Ed.", experience: "6 years" },
-  { name: "Dr. P. S. Mali", designation: "Associate Professor & HoD", department: "Botany", qualification: "M.Sc., Ph.D.", experience: "12 years" },
-  { name: "Shri H. G. Rabari", designation: "Assistant Professor", department: "Botany", qualification: "M.Sc., GSET", experience: "5 years" },
-  { name: "Shri N. K. Solanki", designation: "Librarian", department: "Library", qualification: "M.Lib.I.Sc.", experience: "10 years" },
-  { name: "Shri D. R. Makwana", designation: "Physical Instructor", department: "Sports", qualification: "M.P.Ed.", experience: "9 years" },
-  { name: "Shri B. J. Vaghela", designation: "Head Clerk", department: "Office", qualification: "B.Com.", experience: "18 years" },
+  { name: "Dr. K. M. Joshi", designation: "Principal", department: "Chemistry", qualification: "M.Sc., Ph.D.", experience: "22 years", image: "/images/principal.jpg" },
+  { name: "Dr. S. K. Prajapati", designation: "Associate Professor & HoD", department: "Chemistry", qualification: "M.Sc., Ph.D.", experience: "15 years", image: "/images/faculty-male.svg" },
+  { name: "Shri R. B. Chaudhari", designation: "Assistant Professor", department: "Chemistry", qualification: "M.Sc., GSET", experience: "8 years", image: "/images/faculty-male.svg" },
+  { name: "Dr. M. D. Patel", designation: "Associate Professor & HoD", department: "Physics", qualification: "M.Sc., Ph.D.", experience: "14 years", image: "/images/faculty-male.svg" },
+  { name: "Shri J. V. Desai", designation: "Assistant Professor", department: "Physics", qualification: "M.Sc., GSET", experience: "7 years", image: "/images/faculty-male.svg" },
+  { name: "Dr. A. N. Thakor", designation: "Associate Professor & HoD", department: "Mathematics", qualification: "M.Sc., Ph.D.", experience: "13 years", image: "/images/faculty-male.svg" },
+  { name: "Smt. K. R. Raval", designation: "Assistant Professor", department: "Mathematics", qualification: "M.Sc., B.Ed.", experience: "6 years", image: "/images/faculty-female.svg" },
+  { name: "Dr. P. S. Mali", designation: "Associate Professor & HoD", department: "Botany", qualification: "M.Sc., Ph.D.", experience: "12 years", image: "/images/faculty-male.svg" },
+  { name: "Shri H. G. Rabari", designation: "Assistant Professor", department: "Botany", qualification: "M.Sc., GSET", experience: "5 years", image: "/images/faculty-male.svg" },
+  { name: "Shri N. K. Solanki", designation: "Librarian", department: "Library", qualification: "M.Lib.I.Sc.", experience: "10 years", image: "/images/faculty-male.svg" },
+  { name: "Shri D. R. Makwana", designation: "Physical Instructor", department: "Sports", qualification: "M.P.Ed.", experience: "9 years", image: "/images/faculty-male.svg" },
+  { name: "Shri B. J. Vaghela", designation: "Head Clerk", department: "Office", qualification: "B.Com.", experience: "18 years", image: "/images/faculty-male.svg" },
 ];
 
 export const committees = [

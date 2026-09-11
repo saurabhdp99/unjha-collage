@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="240" viewBox="0 0 200 240">
+  <rect width="200" height="240" fill="#fde68a"/>
+  <circle cx="100" cy="85" r="42" fill="#b45309"/>
+  <circle cx="100" cy="78" r="30" fill="#fef3c7"/>
+  <path d="M55 95 C60 60 140 60 145 95 C145 75 130 55 100 55 C70 55 55 75 55 95 Z" fill="#78350f"/>
+  <path d="M40 240 C40 190 70 170 100 170 C130 170 160 190 160 240 Z" fill="#92400e"/>
+  <path d="M85 170 L100 195 L115 170 Z" fill="#fffbeb"/>
+  <text x="100" y="225" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#fffbeb">Faculty</text>
+</svg>

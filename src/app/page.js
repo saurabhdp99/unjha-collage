@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import UrbanHeader from "@/components/UrbanHeader";
 import UrbanHeroSlider from "@/components/UrbanHeroSlider";
@@ -44,11 +45,22 @@ export default function Home() {
               <p className="section-sub">Dept-wise staff with qualification</p>
               <ul className="divide-y divide-slate-100 mt-2">
                 {facultyList.slice(0, 4).map((f) => (
-                  <li key={f.name} className="py-2 text-sm">
-                    <p className="font-bold">{f.name}</p>
-                    <p className="text-[13px] text-slate-600">
-                      {f.designation}, {f.department} — {f.qualification}
-                    </p>
+                  <li key={f.name} className="py-2 text-sm flex gap-3 items-center">
+                    <span className="relative w-16 h-20 rounded overflow-hidden border border-slate-200 shrink-0 bg-slate-100">
+                      <Image
+                        src={f.image || "/images/faculty-male.svg"}
+                        alt={f.name}
+                        fill
+                        sizes="64px"
+                        className="object-cover object-top"
+                      />
+                    </span>
+                    <span>
+                      <p className="font-bold">{f.name}</p>
+                      <p className="text-[13px] text-slate-600">
+                        {f.designation}, {f.department} — {f.qualification}
+                      </p>
+                    </span>
                   </li>
                 ))}
               </ul>
